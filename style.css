@@ -412,7 +412,7 @@
 
   .landing-header{
     text-transform: uppercase !important;
-    width: 95%;
+    width: 60%;
     max-width: 1100px;
     top:25%;
     position: absolute;   
@@ -446,7 +446,7 @@
     padding: 20px 20px;
     width: 75%;
     margin: 0 auto;
-    font-size: clamp(0.8rem, calc(.1rem + 2.1vw), 1.5rem) !important;
+    font-size: clamp(0.8rem, calc(.1rem + 1.5vw), 1.5rem) !important;
     letter-spacing: clamp(1rem, calc(.1rem + 2.1vw), 1.6rem, ) !important;
   }
 
@@ -468,7 +468,7 @@
   .landing-header p{
     font-family: var(--font-family-b) !important;
     font-weight: 300;
-    font-size: clamp(1.4rem, calc(.1rem + 3vw), 2.5rem);
+    font-size: clamp(1.4rem, calc(.1rem + 1.5vw), 2.5rem);
     letter-spacing: clamp(.1rem, calc(.1rem + .5vw), .3rem);
   }
 

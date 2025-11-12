@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weldon Works Landscaping and Garden Design – Welson Works Landscaping and Garden Maintenance Services</title>
+  <meta name="robots" content="max-image-preview:large">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="Assets/Images/cropped-Favicon-32x32.png" sizes="32x32">
+  <link rel="icon" href="Assets/Images/cropped-Favicon-32x32.png" sizes="32x32">
+  <link rel="icon" href="Assets/Images/cropped-Favicon-192x192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="Assets/Images/cropped-Favicon-180x180.png">
+  <meta name="msapplication-TileImage" content="Assets/Images/cropped-Favicon-270x270.png">
+
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <a onclick="scrollToSection('landing-scroll-anchor')"></a>
+      </div>        
+        <div class="nav-links mobile-hidden">
+            <a onclick="scrollToSection('me')">ABOUT US</a>                
+            <a onclick="scrollToSection('landscaping')">LANDSCAPING SERVICES</a>
+            <a onclick="scrollToSection('gpatios')">PATIOS</a>
+            <a onclick="scrollToSection('fencing')">FENCING</a>                             
+            <a onclick="scrollToSection('garden-maintenance')">GARDEN MAINTENANCE</a> 
+            <a onclick="scrollToSection('contact')">CONTACT US</a>
+
+          </div>      
+          <label class="nav-links-dropdown-button mobile-show">
+            <input type="checkbox">
+          </label>
+          <aside class="sidebar mobile-show">
+            <div class="icon-link"><a onclick="scrollToSection('me')">ABOUT US</a>  </div>              
+            <div class="icon-link"><a onclick="scrollToSection('landscaping')">LANDSCAPING SERVICES</a></div>
+            <div class="icon-link"><a onclick="scrollToSection('gpatios')">PATIOS</a></div>
+            <div class="icon-link"><a onclick="scrollToSection('fencing')">FENCING</a></div>                             
+            <div class="icon-link"><a onclick="scrollToSection('garden-maintenance')">GARDEN MAINTENANCE</a></div> 
+            <div class="icon-link"><a onclick="scrollToSection('contact')">CONTACT US</a></div>            
+            <div class= "icon-link" id="instagram"><a href="https://www.instagram.com/schwenzerrr" target="_blank" rel="noopener noreferrer">INSTAGRAM</a></div>
+            
+          </aside>
+    </div>
+  </nav>
+  <div class = "wrapper">
+    <!-- LANDING SECTION -->
+     <div class ="scroll-anchor" id="landing-scroll-anchor"></div>
+    <section id="landing">
+                  
+          <div class="landing-header landing-panel">
+            <div id="tag1">
+              <div class="line-logo"></div> 
+            </div>
+            <div class="landing-panel" id="tag2">
+              <p>In and around Barnsley</p>
+            </div>
+          </div>
+          
+          <div class="external-links-nav">
+            
+          </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section-center "id="me">
+      
+      <div class = "content-holder full-width-content">
+        <h2>About Us</h2>
+        <p>
+          At Weldon Works we believe Landscaping & Garden Maintenance is built on recommendation and reputation so we cover all aspects of hard or soft landscaping
+        </p>
+        <br>
+        <p>
+          Gardens that we design are always bespoke and we like to work in collaboration with our clients to achieve the highest standard regardless of the size or budget of a project.
+        </p>
+        <br> 
+        <p>
+          With a range of suitable services undertaken by dedicated staff, we are confident that Weldon Works Landscaping will satisfy all your needs.
+        </p>
+        <br>
+        <p>
+          No matter what size your garden is, our expert landscapers provide excellent garden landscape services in Barnsley and the surrounding areas.
+        </p>
+        <br> 
+        <p>
+          Based in Worsbrough, our landscaping team are here to help so <a onclick="scrollToSection('contact')">CONTACT US</a> today.
+        </p>
+        <div id="about-links">
+          <a id="about-link-artstation"></a>
+          <a id="about-link-fab"></a>
+          <a id="about-link-instagram"></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-center" id="contact">
+
+      <div class="contact-container full-width-content">
+        <h1>Contact Me</h1>
+        <form id="form" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+          <!-- Honeypot -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+          <!-- Public Access Key -->
+          <input type="hidden" name="access_key" value="c01cf6ab-0a74-4f8c-b2c7-24c6d81188ad">
+
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="NAME (REQUIRED)" required autocomplete="on">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="EMAIL (REQUIRED)" required autocomplete="on">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="SUBJECT" />          
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="YOUR MESSAGE TO ME" required></textarea>
+
+          <input id="form-submit-button" type="submit">
+        </form>
+        <div id="submit-result" class="">
+          <p>PLACEHOLDER</p>
+        </div>
+      </div>
+      
+      
+    </section>
+  </div>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth', inline: 'nearest' });
+    }
+
+    window.onload = function() {
+      // Reset the form fields when the page loads
+      document.getElementById("form").reset();
+      const form = document.getElementById('form');
+      const result = document.getElementById('submit-result');
+      
+      //on submit, POST to web3Forms and get response
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        //If subject is empty, change to 
+        const subject = formData.get('subject');
+        const name = formData.get('name');
+        if(subject.toString().length === 0) {
+          subject = "New Email from ${name} via my site"
+        }
+        formData.append('subject', subject);
+
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+        result.innerHTML = "Please wait..."
+        //fetch result
+        fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {//show response
+                let json = await response.json();
+                console.log(json);
+                if (response.status == 200) {
+                    result.innerHTML = json.message;
+                    result.classList.add("submit-success");
+                } else {
+                    console.log(response);
+                    result.innerHTML = json.message;
+                    result.classList.add("submit-warning");
+      
+                }
+            })
+            .catch(error => {//show error
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+                result.classList.add("submit-error");
+      
+            })
+            .then(function() {//reset form
+                form.reset();
+                //make response dissapear after 3 seconds if you wish
+                setTimeout(() => {
+                  result.classList.remove("submit-warning" ,"submit-success", "submit-error")
+                }, 15000);
+            });
+      });
+
+    }
+  </script>
+</body>
+</html>

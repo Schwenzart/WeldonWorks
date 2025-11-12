@@ -1,0 +1,47 @@
+<svg id="Logo" xmlns="http://www.w3.org/2000/svg" width="1737.872" height="678.781" viewBox="0 0 1737.872 678.781">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        font-size: 32.709px;
+        font-family: Roboto-CondensedExtraBold, Roboto;
+        font-weight: 800;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        text-anchor: middle;
+      }
+
+      .cls-2, .cls-3 {
+        text-transform: uppercase;
+      }
+
+      .cls-3 {
+        font-size: 34.134px;
+        font-family: Roboto;
+        font-weight: 300;
+      }
+
+      .cls-4 {
+        font-size: 34px;
+        font-family: Roboto-CondensedMedium, Roboto;
+        font-weight: 500;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M999.488,883.8H985.174V462.725h14.314V883.8ZM837.26,477.245l17.892-14.52H999.488v14.52H837.26Zm603.58,291.6-215.9,1.21V641.8h215.9V768.849Zm-19.08-107.688H1242.83v88.328h178.93V661.161Zm-53.68-335.168v0l0.09,0.055,16.75,11.812-0.14-14.586V229.2h41.75V346.629l-0.3-.214,0.16,20.58L1570,467.565H1467.09V864.437H1198.7V640.591H1066.29V864.437H985.174V883.8h97.816V657.531h100.2V880.166h1335.9c34.33,0,52.49-13.962,52.49-43.559V522.014c0-42.685-11.94-52.029-50.1-52.029H1650.79c-10.77,0-10.11,16.939,0,16.939h869.49c29.72,0,34.6,15.348,34.6,39.93V832.977c0,22.847-20.88,31.46-38.17,31.46H1482.59V485.714h139.57L1443.23,358.5V212.26h-76.34l0.97,92.656L1227.32,205,833.681,477.245h26.243l367.4-250.465Z" transform="translate(-833.688 -205)"/>
+  <g>
+    <g>
+      <text id="weldon" class="cls-2" transform="translate(957.384 484.47) scale(4.342 3.758)">weldon</text>
+      <text id="works" class="cls-3" transform="translate(1456.268 484.669) scale(3.55 3.601)">works</text>
+    </g>
+    <text id="Landscaping_Garden_Maintenance" data-name="Landscaping &amp; Garden Maintenance" class="cls-4" transform="matrix(1.975, 0, -0.329, 2.003, 1179.931, 562.666)">Landscaping &amp; Garden Maintenance</text>
+  </g>
+</svg>

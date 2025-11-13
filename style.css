@@ -128,6 +128,7 @@
 
   #instagram > a{
     background-image: var(--instagram-icon);
+    background-size: 40px;
     background-repeat: no-repeat;
     background-position: right;
   }
@@ -259,7 +260,7 @@
     z-index: 1000;
     width: 100%;
     height: 100%;
-    padding: 100px 0 0 0;
+    padding: 60px 0 50px 0;
     min-height: max-content;
     display: flex;
     flex-wrap: wrap;
@@ -285,7 +286,7 @@
   }
 
   .contact-container label{
-    font-size: calc(.1rem + 1.5vw) ;
+    font-size: clamp(0.8rem, calc(.1rem + 2vw), 1.2rem) ;
     color: var(--white);
     text-transform: uppercase;
     font-weight: 100;
@@ -583,10 +584,10 @@
     flex-direction: column;
     align-items: top;
     justify-content: left;
-    top:max(calc(10vh - 1px),99px);
-    left: calc(100% - min(80vw, 449px));
+    top: max(calc(10vh - 1px),99px);
+    left: calc(100% - min(80vw, 350px));
     width: 80vw;
-    max-width: 450px;
+    max-width: 350px;
     min-height: max(90vh, calc(100% - 99px));
     transform: translateZ(1px);
     z-index: 900;
@@ -599,14 +600,10 @@
     display: flex; 
     align-items: center;
     transition: 0.3s;
-    height: 5rem;
+    height: 4rem;
     box-shadow: 0 2px 15px rgba(0,0,0,0.2);
     border-bottom: 2px solid var(--white);
     margin-bottom: -2px;
-  }
-
-  .sidebar > .icon-link{
-    height: 5rem !important;
   }
 
   .sidebar > div > a {
@@ -618,7 +615,7 @@
     transition: 0.3s;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: calc(1rem + 1vw);
+    font-size: clamp(0.5rem, calc(.1rem + 4vw), 1rem);
     font-weight: 1000;
   }
 
@@ -699,7 +696,7 @@
   }
 
   .nav-links-dropdown-button:has(input:checked) + .sidebar {
-    translate: 0.01%;
+    translate: 0;
   }
 
   .nav-links-dropdown-button:has(input:checked) + .nav-links-dropdown-button{
@@ -1048,9 +1045,9 @@
     align-items: top;
     justify-content: left;
     top:max(calc(10vh - 1px),99px);
-    left: calc(100% - min(80vw, 449px));
+    left: calc(100% - min(80vw, 349px));
     width: 80vw;
-    max-width: 450px;
+    max-width: 350px;
     min-height: max(90vh, calc(100% - 99px));
     transform: translateZ(1px);
     z-index: 900;
@@ -1063,14 +1060,10 @@
     display: flex; 
     align-items: center;
     transition: 0.3s;
-    height: 5rem;
+    height: 4rem;
     box-shadow: 0 2px 15px rgba(0,0,0,0.2);
     border-bottom: 2px solid var(--white);
     margin-bottom: -2px;
-  }
-
-  .sidebar > .icon-link{
-    height: 5rem !important;
   }
 
   .sidebar > div > a {
@@ -1082,7 +1075,7 @@
     transition: 0.3s;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: calc(1rem + 1vw);
+    font-size: clamp(0.6rem, calc(.1rem + 6vw), 1.1rem);
     font-weight: 1000;
   }
 
@@ -1416,8 +1409,7 @@
 @media only screen and (max-width:767px) {
   .mobile-call, .mobile-mail{
     position: absolute;
-    height:40px;
-    width: 60px;
+    top: 110px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -1428,14 +1420,19 @@
     height: 100%;
     cursor: pointer;
     display: block;
+    
   }
 
   .mobile-call{
-    left: 210px;
+    height: 30px;
+    width: 30px;
+    left: 10px;
     background-image: var(--phone-icon);
   }
   .mobile-mail{
-    left: 260px;
+    height: 30px;
+    width: 60px;
+    left: 30px;
     background-image: var(--mail-icon);
   }
 

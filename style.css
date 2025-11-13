@@ -804,6 +804,16 @@
     color: var(--white);
     text-transform: uppercase;
     text-align: center;
+    width: 90%;
+  }
+
+  #tag1 {
+    padding: 30px;
+  }
+
+  #tag2{
+    width: 100%;
+    border-radius: 15px;
   }
 
   #welcome{

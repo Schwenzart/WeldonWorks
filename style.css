@@ -519,7 +519,7 @@
 
   .content-holder > h2{
     font-size: clamp(1.2rem,calc(.1rem + 9vw), 4rem);
-    margin-bottom: clamp(10px,2vh,50px);
+    margin-bottom: clamp(10px,4vh,50px);
   }
 
   .content-holder > p{
@@ -575,7 +575,7 @@
   }
 
   #services ul{
-    align-content: center;
+    align-content: start;
     margin: 0 auto;
     justify-items: center;
     list-style: none;
@@ -584,21 +584,26 @@
   }
 
   #services ul > li{
-    font-size: clamp(.7rem, calc(.1rem + 3.5vw), 1.5rem );
+    font-size: clamp(.7rem, calc(.1rem + 2vw), 1.5rem );
     width: 100%;
-    margin: 10px;
+    margin: 5px;
+    padding: 5px;
     text-align: center;
-    font-weight: 1000;
-    
-    transition: all 600ms ease;
+    text-transform: uppercase;
+    font-weight: 300;
+    color:hsl(from var(--darkblue) h 0 100);
+    background-color: var(--darkblue);
+    transition: all 300ms ease;
     cursor: pointer;
+    border-radius: 100px;
+    box-shadow: 2px 0px 5px #00000093;
   }
 
   #services ul > li:hover{
-    padding: 10px;
-    margin: -5px;
+    padding: 7px;
+    margin: 6px;
     color:hsl(from var(--darkblue) h 0 100);
-    background-color: var(--darkblue);
+    background-color: hsl(from var(--darkblue) h s 55);
   }
 
 
@@ -1462,7 +1467,15 @@
   }
 }
 
+
+/* tablet view and below */
+
 @media only screen and (max-width:767px) {
+
+  #services{
+    height: max-content !important;
+  }
+
   .mobile-call, .mobile-mail{
     position: absolute;
     top: 110px;
@@ -1496,6 +1509,10 @@
 
 @media only screen and (min-width:768px) {
 
+  #services{
+    height: max-content !important;
+    padding: 100px 0 60px !important;
+  }
 
   .nav-links a{
     margin: 0;
@@ -1677,8 +1694,8 @@
 
   section{
       position: relative;
-      min-height: 95vh;
-      height: max-content;
+      height: 100%;
+      min-height: max-content;
       padding: 50px 0;
       width: 100%;
       display: flex;

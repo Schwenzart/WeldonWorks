@@ -12,12 +12,14 @@
     --logo: url("Assets/Images/weldonworks-background.svg");
     --logo-line: url("Assets/Images/weldonworks-lines.png");
     --instagram-icon: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/256px-Instagram_icon.png?20200512141346");
+    --mail-icon: url("https://cdn-icons-png.flaticon.com/512/888/888853.png");
+    --phone-icon: url("https://cdn-icons-png.flaticon.com/512/4477/4477610.png");
     --lightbackground: url("Assets/Images/whitewall.jpg");
     --darkbackground: url("Assets/Images/darkwall.jpg");
     --hamburger-width: max(25px, calc(8vh - 20px));
     --hamburger-height: calc(var(--hamburger-total-height)/9);
     --hamburger-gap: calc(var(--hamburger-height) * 2);
-    --hamburger-total-height: max(60px, 5vh);
+    --hamburger-total-height: max(40px, 4vh);
     --nav-anim-timing: .5s ease-in-out;
     --font-family-a: "Roboto", sans-serif;
     --font-family-b: "Roboto", sans-serif;
@@ -132,10 +134,10 @@
 
   #nav-instagram{
     position: absolute;
-    right: 30px;
-    top: 85px;
-    height: 70px;
-    width: 70px;
+    right: 50px;
+    top: 100px;
+    height: 50px;
+    width: 50px;
     min-width: unset !important;
     border-radius: 15px;
     background-image: var(--instagram-icon);
@@ -273,6 +275,7 @@
   } 
 
   .contact-container h1{
+
     line-height: clamp(.6rem, 3.6rem, .1rem + 11.5vw);
     color: var(--white);
     font-size: clamp(.5rem, 3.5rem, .1rem + 11vw);
@@ -282,11 +285,10 @@
   }
 
   .contact-container label{
-    font-size: calc(.2rem+3vw) ;
+    font-size: calc(.1rem + 1.5vw) ;
     color: var(--white);
     text-transform: uppercase;
-    font-weight: 1000;
-    margin: 5px 0;
+    font-weight: 100;
     position: relative;
     text-align: left;
   }
@@ -304,9 +306,9 @@
     margin-bottom: 5px;
     resize: vertical;
     font-size: clamp(.3rem, calc(.1rem + 2vw), 1rem);
-    letter-spacing: unset;
+    letter-spacing: .1rem;
     text-decoration: none;
-    font-weight: 1000;
+    font-weight: 300;
     text-transform: uppercase;
     min-height: 30px;
     padding-block: 5px;
@@ -338,7 +340,7 @@
     border-radius: 100px;
     cursor: pointer;
     transition: .3s ease;
-    width: 100%;
+    width: 60%;
     margin-top: 20px;
   }
   
@@ -433,9 +435,9 @@
     text-transform: uppercase !important;
     width: 80%;
     max-width: 700px;
-    top:20%;
+    top: 25%;
     position: absolute;   
-    transform: translateZ(2px) scale(0.9); 
+    transform: translateZ(40px) scale(0.66); 
   }
 
   .line-logo{
@@ -454,7 +456,7 @@
     padding: 60px 60px;
     color: var(--white);
     background-color: #00000093;
-    box-shadow: 10px 0px 5px #00000093;
+    box-shadow: 0px 0px 5px #00000093;
     margin: 20px 0;
     z-index: 50;    
     border-radius: 30px;
@@ -582,9 +584,9 @@
     align-items: top;
     justify-content: left;
     top:max(calc(10vh - 1px),99px);
-    left: calc(100% - min(80vw, 369px));
+    left: calc(100% - min(80vw, 449px));
     width: 80vw;
-    max-width: 370px;
+    max-width: 450px;
     min-height: max(90vh, calc(100% - 99px));
     transform: translateZ(1px);
     z-index: 900;
@@ -822,6 +824,8 @@
     text-transform: uppercase;
     text-align: center;
     width: 90%;
+    top:33%;
+    transform: scale(0.8);
   }
 
   #tag1 {
@@ -1044,9 +1048,9 @@
     align-items: top;
     justify-content: left;
     top:max(calc(10vh - 1px),99px);
-    left: calc(100% - 369px);
+    left: calc(100% - min(80vw, 449px));
     width: 80vw;
-    max-width: 370px;
+    max-width: 450px;
     min-height: max(90vh, calc(100% - 99px));
     transform: translateZ(1px);
     z-index: 900;
@@ -1187,6 +1191,12 @@
 
   }
 
+  #nav-top-center{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
   .logo {    
 
     top: 0px;
@@ -1206,6 +1216,7 @@
   }
 
   .logo a {
+      display: block;
       height:100%;
       width: 100%;
       cursor: pointer;
@@ -1283,13 +1294,9 @@
     text-transform: uppercase;
     text-align: center;
     text-shadow: 2px 0px 5px #0000001a;
-  }
-
-  .landing-header{
-    color: var(--white);
-    text-transform: uppercase;
-    text-align: center;
     width: 90%;
+    top:33%;
+    transform: scale(0.8);
   }
 
   #tag1 {
@@ -1406,22 +1413,52 @@
   }
 }
 
-@media only screen and (min-width:769px) {
+@media only screen and (max-width:767px) {
+  .mobile-call, .mobile-mail{
+    position: absolute;
+    height:40px;
+    width: 60px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .mobile-call > a, .mobile-mail > a{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: block;
+  }
+
+  .mobile-call{
+    left: 210px;
+    background-image: var(--phone-icon);
+  }
+  .mobile-mail{
+    left: 260px;
+    background-image: var(--mail-icon);
+  }
+
+}
+
+@media only screen and (min-width:768px) {
 
 
   .nav-links a{
     margin: 0;
     height: 100%;
     align-content: center;
-    transition: all 0.5s ease-in-out;
+    transition: background 600ms ease-in, color 300ms ease-in;
   }
 
   .nav-links a:hover {
-    background-color: var(--white);
+    background-color: #ffffffd0;
     color: var(--darkblue);
   }
 
   #nav-top-center > a {
+    background-size: 75%;
+    background-color: var(--darkblue);
     position: relative;
     padding: 0;
     transition: all 0.6s ease-in-out; 
@@ -1447,6 +1484,7 @@
     background-color: var(--darkblue);
     font-size: 1.2em;
     text-transform: uppercase;
+    width: 182px;
   }
 
   #nav-top-left{
@@ -1457,7 +1495,7 @@
   }
 
   #nav-top-left > a {
-    padding: 5px 30px 5px 20px;
+    padding: 5px 20px 5px 20px;
     border-radius: 20px 0 0 20px;
     transition: all 0.5s ease-in-out;
   }
@@ -1469,7 +1507,7 @@
   }
 
   #nav-top-right > a{
-    padding: 5px 20px 5px 30px;
+    padding: 5px 20px 5px 20px;
     border-radius: 0 20px 20px 0;
     transition: all 0.5s ease-in-out;
   }
@@ -1493,7 +1531,7 @@
     text-align: center;
     min-height: 90px;
     max-height: 450px;
-    width: 650px;
+    width: 450px;
     top: 80px;
     transform-origin: center;
     position: absolute; 
@@ -1561,6 +1599,7 @@
     max-width: 1200px;
     height: 100%;
     align-items: center;
+    justify-content: center;
   }
 
   .nav-links a {
@@ -1775,6 +1814,7 @@
     max-width: 1400px;
     height: 100%;
     align-items: center;
+    justify-content: center;
   }
 
   .nav-links a {

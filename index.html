@@ -24,7 +24,9 @@
   <nav>
     <div class="nav-container">
       <div class="logo">
-        <a onclick="scrollToSection('landing-scroll-anchor')"></a>
+        <div class="mobile-hidden" id="nav-top-left"><a id="telephone-icon" href="tel:+447870150134">Call us</a></div>
+        <div id="nav-top-center" ><a class="logo-center" onclick="scrollToSection('landing-scroll-anchor')"></a></div>
+        <div class="mobile-hidden" id="nav-top-right"><a id="email-icon" href="mail-to:weldonworkslandscape@hotmail.com">Email Us</a></div>
       </div>        
         <div class="nav-links mobile-hidden">
             <a onclick="scrollToSection('me')">ABOUT US</a>                
@@ -33,6 +35,7 @@
             <a onclick="scrollToSection('fencing')">FENCING</a>                             
             <a onclick="scrollToSection('garden-maintenance')">GARDEN MAINTENANCE</a> 
             <a onclick="scrollToSection('contact')">CONTACT US</a>
+            <a id="nav-instagram" href="https://www.instagram.com/weldonworkslandscaping" target="_blank" rel="noopener noreferrer"></a>
 
           </div>      
           <label class="nav-links-dropdown-button mobile-show">
@@ -45,7 +48,7 @@
             <div class="icon-link"><a onclick="scrollToSection('fencing')">FENCING</a></div>                             
             <div class="icon-link"><a onclick="scrollToSection('garden-maintenance')">GARDEN MAINTENANCE</a></div> 
             <div class="icon-link"><a onclick="scrollToSection('contact')">CONTACT US</a></div>            
-            <div class= "icon-link" id="instagram"><a href="https://www.instagram.com/schwenzerrr" target="_blank" rel="noopener noreferrer">INSTAGRAM</a></div>
+            <div class= "icon-link" id="instagram"><a href="https://www.instagram.com/weldonworkslandscaping" target="_blank" rel="noopener noreferrer">INSTAGRAM</a></div>
             
           </aside>
     </div>
@@ -104,7 +107,7 @@
     <section class="section-center" id="contact">
 
       <div class="contact-container full-width-content">
-        <h1>Contact Me</h1>
+        <h1>Contact Us</h1>
         <form id="form" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
           <!-- Honeypot -->
           <input type="checkbox" name="botcheck" class="hidden" style="display: none;">

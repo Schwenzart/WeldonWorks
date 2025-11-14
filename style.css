@@ -4,10 +4,13 @@
     --lightyellow: #fcbf47;
     --verylightyellow: #f3e0ba;
     --darkblue : #162183;
+    --darkbluegradient: linear-gradient(0deg,rgba(11, 19, 87, 1) 0%, rgba(22, 33, 131, 1) 19%, rgba(22, 33, 131, 1) 81%, rgba(34, 46, 153, 1) 100%);
+
     --darkblueAlpha: #181106be;
     --lightgrey: #6c7a75;
     --greyblue: #4d646a;
     --white: #f9f9f9;
+    --whitegradient: linear-gradient(180deg,rgb(228, 228, 228) 0%, rgba(255, 255, 255, 1) 100%);
     --logo-square: url("Assets/Images/W-Logo-1248x1248.jpg");
     --logo: url("Assets/Images/weldonworks-background.svg");
     --logo-line: url("Assets/Images/weldonworks-lines.png");
@@ -62,13 +65,25 @@
     overflow-y: scroll;
   }
 
+  .wrapper:after{
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    box-shadow: inset 0px 0px 250px #00000093;
+    box-shadow: inset 10px 0px 20px #000000a6;
+  }
+
   .section-center:nth-of-type(odd){
-    background-color: var(--white) !important;
+    background: var(--whitegradient) !important;
+    box-shadow: 0px 0px 50px #000000a6;
     color: var(--darkblue) !important;
   }
 
   .section-center:nth-of-type(even){
-    background-color: var(--darkblue) !important;
+    background: var(--darkbluegradient) !important;
     color: var(--white) !important;
   }
 
@@ -268,7 +283,7 @@
 
   #contact{
     color: var(--white) !important;
-    background-color: var(--darkblue) !important;
+    background: var(--darkbluegradient) !important;
     background-image: url("Assets/Images/contact cover.jpg");
     background-size: cover;
     background-position: center;
@@ -523,7 +538,7 @@
   }
 
   .content-holder > p{
-    font-size: clamp(.8rem,calc(.1rem + 2.5vh),1.5rem);
+    font-size: clamp(.8rem,calc(.1rem + 1.5vw), 1.2rem);
   }
 
   .content-holder > p > a{
@@ -553,14 +568,21 @@
   }
 
   .column-image{
+    background-image: var(--logo-square);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    min-height: 300px;
     flex-grow: 1;
     content: '';
     object-position: center;
     object-fit: cover;
-    border-radius: 25px;
+    border-radius: 10px;
     min-width: 280px;
     max-width: 500px;
     width: 30%;
+    box-shadow: -10px 2px 30px #00000069, -2px 2px 5px #00000093;
+    overflow: hidden;
   }
 
   .column-text{
@@ -571,7 +593,12 @@
   }
 
   .column-text p{
-    text-align: justify;
+    text-align: center;
+  }
+
+  #services .column-image{
+    background-image: url("Assets/Images/services-image.jpg");
+    background-size: cover;
   }
 
   #services ul{
@@ -580,14 +607,15 @@
     justify-items: center;
     list-style: none;
     list-style-position: inside;
-    height: 300px;
+    height: 250px;
   }
 
   #services ul > li{
-    font-size: clamp(.7rem, calc(.1rem + 2vw), 1.5rem );
+    display: block;
+    font-size: clamp(.7rem, calc(.1rem + 2vw), 1rem );
     width: 100%;
     margin: 5px;
-    padding: 5px;
+    
     text-align: center;
     text-transform: uppercase;
     font-weight: 300;
@@ -604,6 +632,13 @@
     margin: 6px;
     color:hsl(from var(--darkblue) h 0 100);
     background-color: hsl(from var(--darkblue) h s 55);
+  }
+
+  #services ul > li > a{
+    padding: 5px;
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 
 
@@ -632,7 +667,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.8);
+    box-shadow: 0 2px 30px rgba(0,0,0,0.8);
     transform: translateZ(1px);
     z-index: 1000;
   }
@@ -1000,7 +1035,7 @@
 
   .dropdown-mobile-nav {
     position: relative;
-    background: var(--darkblue);
+    background: var(--darkbluegradient);
     margin-top: 2px;
   }
 
@@ -1875,13 +1910,13 @@
     max-width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     position: relative;
   }
 
   .nav-links {
     display: flex;
-    width: 95%;
+    width: 90%;
     max-width: 1400px;
     height: 100%;
     align-items: center;
@@ -1890,13 +1925,13 @@
 
   .nav-links a {
     flex-grow: 1;
-    width:16%;
+    width:15%;
     max-width: 200px;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
     font-style: bold;
-    font-size: clamp(.8rem, calc(0.9vw + 0.2rem), 1.25rem);
+    font-size: clamp(.7rem, calc(1vw + 0.1rem), 1rem);
     color: var(--white);
     font-weight: 1000;
     min-width: 100px;

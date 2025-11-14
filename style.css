@@ -5,12 +5,12 @@
     --verylightyellow: #f3e0ba;
     --darkblue : #162183;
     --darkbluegradient: linear-gradient(0deg,rgba(11, 19, 87, 1) 0%, rgba(22, 33, 131, 1) 19%, rgba(22, 33, 131, 1) 81%, rgba(34, 46, 153, 1) 100%);
-
+    --concrete: url("Assets/Images/concrete.jpg");
     --darkblueAlpha: #181106be;
     --lightgrey: #6c7a75;
     --greyblue: #4d646a;
     --white: #f9f9f9;
-    --whitegradient: linear-gradient(180deg,rgb(228, 228, 228) 0%, rgba(255, 255, 255, 1) 100%);
+    --whitegradient: linear-gradient(180deg,rgb(241, 241, 241) 30%, rgba(255, 255, 255, 1) 100%);
     --logo-square: url("Assets/Images/W-Logo-1248x1248.jpg");
     --logo: url("Assets/Images/weldonworks-background.svg");
     --logo-line: url("Assets/Images/weldonworks-lines.png");
@@ -77,13 +77,16 @@
   }
 
   .section-center:nth-of-type(odd){
-    background: var(--whitegradient) !important;
-    box-shadow: 0px 0px 50px #000000a6;
+    background-image: var(--concrete) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 50px #00000048;
     color: var(--darkblue) !important;
   }
 
   .section-center:nth-of-type(even){
     background: var(--darkbluegradient) !important;
+    box-shadow: 0px 0px 50px #00000079;
     color: var(--white) !important;
   }
 

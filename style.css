@@ -51,6 +51,9 @@
     letter-spacing: .2rem;
   }
 
+  a{
+    cursor: pointer;
+  }
   .light-font{
     font-weight: 100;
   }
@@ -634,7 +637,8 @@
     padding: 7px;
     margin: 6px;
     color:hsl(from var(--darkblue) h 0 100);
-    background-color: hsl(from var(--darkblue) h s 55);
+    background-color: hsl(from var(--darkblue) h s 43);
+    box-shadow: 0px 2px 15px #0000009c;
   }
 
   #services ul > li > a{

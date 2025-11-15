@@ -548,7 +548,7 @@
   }
 
   .content-holder > p{
-    font-size: clamp(.8rem,calc(.1rem + 1.5vw), 1.2rem);
+    font-size: clamp(.8rem,calc(.1rem + 2vw), 1.2rem);
   }
 
   .content-holder > p > a{
@@ -567,7 +567,29 @@
     margin: 0 auto;
   }
 
+  .column-full{
+    margin: 30px auto;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    row-gap: 10px;
+    column-gap: 20px;
+    width: 100%;
+    max-width: 797px;
+  }
+
+
+  .column-full a, .column-2 a{
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+
   .column-2{
+    align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -582,14 +604,14 @@
     background-position: center;
     background-size: cover;
     display: flex;
-    min-height: 300px;
+    min-height: 420px;
     flex-grow: 1;
     content: '';
     object-position: center;
     object-fit: cover;
     border-radius: 10px;
     min-width: 280px;
-    max-width: 500px;
+    max-width: calc(767px / 2);
     width: 30%;
     box-shadow: -10px 2px 30px #00000069, -2px 2px 5px #00000093;
     overflow: hidden;
@@ -598,7 +620,7 @@
   .column-text{
     flex-grow: 1;
     min-width: 250px;
-    max-width: 450px;
+    max-width: calc(767px / 2);
     height:90%
   }
 
@@ -617,7 +639,7 @@
     justify-items: center;
     list-style: none;
     list-style-position: inside;
-    height: 250px;
+    height: 26ex;
   }
 
   #services ul > li{
@@ -651,6 +673,25 @@
     width: 100%;
     height: 100%;
   }
+
+
+
+  #landscaping .column-image{
+    background-image: url("Assets/Images/Landscaping-image.jpg");
+  }
+
+  #landscaping .column-text p, #landscaping .column-text h3{
+    text-align: left;
+  }
+
+  #landscaping .column-full{
+    margin: 30px auto;
+    justify-items: left;
+    justify-content: left;
+    text-align: left;
+  }
+
+
 
 
 /* Landscape phones and down */
@@ -1517,6 +1558,14 @@
 /* tablet view and below */
 
 @media only screen and (max-width:767px) {
+
+  .column-full{
+    width: 100%;
+  }
+
+  .column-2, .column-full, .column-text, .column-image{
+    max-width: unset;
+  }
 
   #services{
     height: max-content !important;

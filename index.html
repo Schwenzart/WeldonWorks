@@ -25,21 +25,21 @@
     <div class="nav-container">
       <div class="logo">
         <div class="mobile-hidden" id="nav-top-left"><a id="telephone-icon" href="#">Tel: +447870150134</a></div>
-        <div id="nav-top-center" ><a class="logo-center" onclick="scrollToSection('landing-scroll-anchor')"></a></div>
+        <div id="nav-top-center" ><a class="logo-center" onclick="scrollToID('landing-scroll-anchor')"></a></div>
         <div class="mobile-hidden" id="nav-top-right"><a id="email-icon" href="mailto:weldonworkslandscape@hotmail.com">Email Us</a></div>
       </div>        
         <div class="nav-links mobile-hidden">
-            <a onclick="scrollToSection('me')">ABOUT US</a>                
-            <a onclick="scrollToSection('services')">OUR SERVICES</a>
-            <a onclick="scrollToSection('patios')">PATIOS</a>
-            <a onclick="scrollToSection('fencing')">FENCING</a>                             
-            <a onclick="scrollToSection('garden-maintenance')">GARDEN MAINTENANCE</a> 
-            <a onclick="scrollToSection('contact')">CONTACT US</a>
+            <a onclick="scrollToID('me')">ABOUT US</a>                
+            <a onclick="scrollToID('services')">OUR SERVICES</a>
+            <a onclick="scrollToID('patios')">PATIOS</a>
+            <a onclick="scrollToID('fencing')">FENCING</a>                             
+            <a onclick="scrollToID('garden-maintenance')">GARDEN MAINTENANCE</a> 
+            <a onclick="scrollToID('contact')">CONTACT US</a>
             <a id="nav-instagram" href="https://www.instagram.com/weldonworkslandscaping" target="_blank" rel="noopener noreferrer"></a>
 
           </div>      
           <div class="contact-nav mobile-show">
-            <div><a onclick="scrollToSection('contact')">CONTACT US</a></div>
+            <div><a onclick="scrollToID('contact')">CONTACT US</a></div>
             <div class ="list-line"></div>
             <div ><a href="tel:+447870150134">TEL</a></div>
             <div class ="list-line"></div>
@@ -52,12 +52,12 @@
 
           <aside class="sidebar mobile-show">
             <div class= "icon-link" id="instagram"><a href="https://www.instagram.com/weldonworkslandscaping" target="_blank" rel="noopener noreferrer">INSTAGRAM</a></div>
-            <div class="icon-link"><a onclick="scrollToSection('me')">ABOUT US</a>  </div>              
-            <div class="icon-link"><a onclick="scrollToSection('services')">OUR SERVICES</a></div>
-            <div class="icon-link"><a onclick="scrollToSection('patios')">PATIOS</a></div>
-            <div class="icon-link"><a onclick="scrollToSection('fencing')">FENCING</a></div>                             
-            <div class="icon-link"><a onclick="scrollToSection('garden-maintenance')">GARDEN MAINTENANCE</a></div> 
-            <div class="icon-link"><a onclick="scrollToSection('contact')">CONTACT US</a></div>            
+            <div class="icon-link"><a onclick="scrollToID('me')">ABOUT US</a>  </div>              
+            <div class="icon-link"><a onclick="scrollToID('services')">OUR SERVICES</a></div>
+            <div class="icon-link"><a onclick="scrollToID('patios')">PATIOS</a></div>
+            <div class="icon-link"><a onclick="scrollToID('fencing')">FENCING</a></div>                             
+            <div class="icon-link"><a onclick="scrollToID('garden-maintenance')">GARDEN MAINTENANCE</a></div> 
+            <div class="icon-link"><a onclick="scrollToID('contact')">CONTACT US</a></div>            
 
 
             
@@ -67,34 +67,33 @@
   <div class = "wrapper">
     <!-- LANDING SECTION -->
      <div class ="scroll-anchor" id="landing-scroll-anchor"></div>
-    <section id="landing">
-                  
-          <div class="landing-header landing-panel">
-            <div id="tag1">
-              <div class="line-logo"></div> 
-            </div>
-            <div class="landing-panel" id="tag2">
-              <p>In and around Barnsley</p>
-            </div>
-          </div>
-          
-          <div class="external-links-nav">
-            
-          </div>
-    </section>
+    <div class="section" id="landing">                
+      <div class="landing-header landing-panel">
+        <div id="tag1">
+          <div class="line-logo"></div> 
+        </div>
+        <div class="landing-panel" id="tag2">
+          <p>In and around Barnsley</p>
+        </div>
+      </div>
+      
+      <div class="external-links-nav">
+        
+      </div>
+    </div>
 
     <!-- ABOUT SECTION -->
-    <section class="section-center "id="me">
+    <div class="section section-center "id="me">
       
       <div class = "content-holder full-width-content">
         <h2>About Us</h2>
         <div class="white line top-heavy"></div>
         <p>
-          At Weldon Works we believe Landscaping & Garden Maintenance are built on recommendation and reputation, so we cover all aspects of <a onclick="scrollToSection('landscaping')">Hard &amp; Soft Landscaping</a>.
+          At Weldon Works we believe Landscaping & Garden Maintenance are built on recommendation and reputation, so we cover all aspects of <a onclick="scrollToID('landscaping')">Hard &amp; Soft Landscaping</a>.
         </p>
         <br>
         <p>
-           <a onclick="scrollToSection('garden-design')">Gardens that we design</a> are always bespoke and we like to work in collaboration with our clients to achieve the highest standard regardless of the size or budget of a project.
+           <a onclick="scrollToID('garden-design')">Gardens that we design</a> are always bespoke and we like to work in collaboration with our clients to achieve the highest standard regardless of the size or budget of a project.
         </p>
         <br> 
         <p>
@@ -106,15 +105,15 @@
         </p>
         <br> 
         <p>
-          Based in Worsbrough, our landscaping team are here to help so <a onclick="scrollToSection('contact')">CONTACT US</a> today.
+          Based in Worsbrough, our landscaping team are here to help so <a onclick="scrollToID('contact')">CONTACT US</a> today.
         </p>
         <div class="white line"></div>
       </div>
-    </section>
+    </div>
 
     <!-- SERVICES -->
 
-    <section class="section-center "id="services">  
+    <div class="section section-center "id="services">  
       <div class = "content-holder full-width-content">
         <h2>Our Services</h2>
         <!-- <div class="blue line"></div> -->
@@ -129,23 +128,23 @@
             <br>
             
             <ul>
-              <li><a onclick="scrollToSection('landscaping')">Hard &amp; Soft Landscaping</a></li>
-              <li><a onclick="scrollToSection('garden-design')">Garden Design</a></li>
-              <li><a onclick="scrollToSection('patios')">Patios &amp; Paving</a></li>
-              <li><a onclick="scrollToSection('driveways')">Driveways &amp; Block Paving</a></li>
-              <li><a onclick="scrollToSection('fencing')">Fencing</a></li>
-              <li><a onclick="scrollToSection('turf')">Turf &amp; Artificial Grass</a></li>
-              <li><a onclick="scrollToSection('garden-maintenance')">Garden Maintenance</a></li>
+              <li><a onclick="scrollToID('landscaping')">Hard &amp; Soft Landscaping</a></li>
+              <li><a onclick="scrollToID('garden-design')">Garden Design</a></li>
+              <li><a onclick="scrollToID('patios')">Patios &amp; Paving</a></li>
+              <li><a onclick="scrollToID('driveways')">Driveways &amp; Block Paving</a></li>
+              <li><a onclick="scrollToID('fencing')">Fencing</a></li>
+              <li><a onclick="scrollToID('turf')">Turf &amp; Artificial Grass</a></li>
+              <li><a onclick="scrollToID('garden-maintenance')">Garden Maintenance</a></li>
             </ul>
           </div>
 
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- LANDSCAPING -->
 
-    <section class="section-center "id="landscaping">  
+    <div class="section section-center "id="landscaping">  
       <div class = "content-holder full-width-content">
         <h2>Hard &amp; Soft Landscaping</h2>
         <br>
@@ -162,14 +161,14 @@
         </div>
         <div class="column-full">
           <h2>Are You In Need of Inspiration?</h2>
-          <p>Get in touch with us if we can help you with anything in the garden. No job is too big or small. <a onclick="scrollToSection('contact')">Contact us today!</a></p>
+          <p>Get in touch with us if we can help you with anything in the garden. No job is too big or small. <a onclick="scrollToID('contact')">Contact us today!</a></p>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- Garden Design -->
 
-    <section class="section-center "id="garden-design">  
+    <div class="section section-center "id="garden-design">  
       <div class = "content-holder full-width-content">
         <h2>Garden Design</h2>
         <div class="column-2">
@@ -181,11 +180,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- PATIOS -->
 
-    <section class="section-center "id="patios">  
+    <div class="section section-center "id="patios">  
       <div class = "content-holder full-width-content">
         <h2>Patios &amp; Paving</h2>
         <div class="column-2">
@@ -198,11 +197,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- DRIVEWAYS -->
 
-    <section class="section-center "id="driveways">  
+    <div class="section section-center "id="driveways">  
       <div class = "content-holder full-width-content">
         <h2>Driveways &amp; Block Paving</h2>
         <div class="column-2">
@@ -214,11 +213,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- FENCING -->
 
-    <section class="section-center" id="fencing">  
+    <div class="section section-center" id="fencing">  
       <div class = "content-holder full-width-content">
         <h2>Fencing</h2>
         <div class="column-2">
@@ -231,11 +230,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- TURF & ARTIFICIAL -->
 
-    <section class="section-center" id="turf">  
+    <div class="section section-center" id="turf">  
       <div class = "content-holder full-width-content">
         <h2>Turf &amp; Artificial Grass</h2>
         <div class="column-2">
@@ -247,11 +246,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- GARDEN MAINTENANCE -->
 
-    <section class="section-center "id="garden-maintenance">  
+    <div class="section section-center "id="garden-maintenance">  
       <div class = "content-holder full-width-content">
         <h2>Garden Maintenance</h2>
         <div class="column-2">
@@ -264,11 +263,11 @@
           </div>
         </div>
       </div>
-    </section>    
+    </div>    
 
     <!-- Contact Section -->
 
-    <section class="section-center" id="contact">
+    <div class="section section-center" id="contact">
 
       <div class="contact-container full-width-content">
         <h1>Contact Us</h1>
@@ -296,11 +295,11 @@
       </div>
       
       
-    </section>
+    </div>
   </div>
 
   <script>
-    function scrollToSection(id) {
+    function scrollToID(id) {
       document.getElementById(id).scrollIntoView({ behavior: 'smooth', inline: 'nearest' });
     }
 

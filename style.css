@@ -89,7 +89,7 @@
     overflow-x: hidden;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
+    /* scroll-snap-type: y proximity; */
   }
 
   .wrapper:after{
@@ -590,7 +590,8 @@
   }
 
   .content-holder h2{
-    font-size: clamp(1.2rem,calc(.1rem + 9vw), 4rem);
+    text-transform: uppercase;
+    font-size: clamp(1.2rem,calc(.1rem + 9vw), 3.5rem);
     margin-top: 0px;
     text-shadow: 2px 2px 5px #00000050;
     letter-spacing: .025rem;

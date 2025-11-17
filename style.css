@@ -508,6 +508,22 @@
     height: max-content !important;
   }
 
+  .sidebar > div {
+    transition: all 0.5s, border-radius 0s !important;
+  }
+
+  .sidebar > div:last-child{
+    border-radius: 0 0 0 20px !important;
+  }
+
+
+  .sidebar > div:last-child:hover{
+    background-color: var(--white);
+    box-shadow: 3px 0px 2px var(--white);
+    
+    z-index: 1006;
+  }
+
   .sidebar > div > a {
     height: 100%;
     width: 100%;
@@ -859,7 +875,6 @@
   .sidebar > div, .sidebar > .icon-link{
     display: block; 
     align-items: center;    
-    transition: all 0.6s ease, border-radius 0s;
     height: 4rem;
   }
 
@@ -878,13 +893,6 @@
   .sidebar > div:hover{
     background-color: var(--white);
     box-shadow: 3px 0px 2px var(--white);
-    z-index: 1006;
-  }
-
-  .sidebar > div:last-child:hover {
-    background-color: var(--white);
-    box-shadow: 3px 0px 2px var(--white);
-    border-radius: 0px 0px 0px 20px;
     z-index: 1006;
   }
 

@@ -6,7 +6,7 @@
     --darkblue : #162183;
     --darkbluegradient: linear-gradient(0deg,rgba(11, 19, 87, 1) 0%, rgba(22, 33, 131, 1) 19%, rgba(22, 33, 131, 1) 81%, rgba(34, 46, 153, 1) 100%);
     --concrete: url("Assets/Images/concrete.jpg");
-    --darkblueAlpha: #181106be;
+    --darkblueAlpha: #181106dc;
     --lightgrey: #6c7a75;
     --greyblue: #4d646a;
     --white: #f9f9f9;
@@ -29,6 +29,28 @@
     --dark-gradiant: radial-gradient(circle,rgba(59, 65, 66, 1) 0%, rgba(51, 50, 50, 1) 50%, rgba(28, 28, 28, 1)  100%);
 
 }
+
+
+::-webkit-scrollbar{
+  width: 6px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background-color: hsl(from var(--darkblue) h s 95);
+}
+
+::-webkit-scrollbar-thumb:hover{
+  border-radius: 10px;
+  background-color: hsl(from var(--darkblue) h s 100);
+}
+
+
+::-webkit-scrollbar-track{
+  background-color: var(--darkblue);
+}
+
 
 /* --- RESET --- */
   * {
@@ -79,7 +101,7 @@
     box-shadow: inset 10px 0px 20px #000000a6;
   }
 
-  .section-center:nth-of-type(odd){
+  .section-center:nth-of-type(even){
     background-image: var(--concrete) !important;
     background-size: cover;
     background-repeat: no-repeat;
@@ -88,11 +110,37 @@
     color: var(--darkblue) !important;
   }
 
-  .section-center:nth-of-type(even){
+  .section-center:nth-of-type(odd){
     background: var(--darkbluegradient) !important;
     box-shadow: 0px 0px 50px #00000079;
     text-shadow: 2px 0px 5px #00000054;
     color: var(--white) !important;
+  }
+
+  .section-center:nth-of-type(odd) .content-holder{
+    background-color: var(--white);
+    color: var(--darkblue);
+    box-shadow: 0px 0px 10px #00000033;
+  }
+
+  .section-center:nth-of-type(even) .content-holder{
+    background-color: var(--darkblue);
+    color: var(--white);
+  }
+
+  .section-center:nth-of-type(even) li{
+    background-color: var(--white);
+    color: var(--darkblue);
+  }
+
+  .section-center:nth-of-type(odd) li{
+    background-color: var(--darkblue);
+    color: var(--white);
+  }
+
+  .section-center:nth-of-type(odd) li:hover{
+    background-color: var(--darkblue);
+    color: #eeeeee !important;
   }
 
   a{
@@ -183,7 +231,7 @@
   #nav-instagram:hover, .icon-glow:hover{
     background-color: unset !important;
     filter: brightness(1.2);
-    box-shadow: 0px 0px 20px #ffffff69;
+    box-shadow: 0px 0px 10px #ffffff69;
   }
 
   .icon-glow{
@@ -542,7 +590,7 @@
 
   .content-holder h2{
     font-size: clamp(1.2rem,calc(.1rem + 9vw), 4rem);
-    margin-top: clamp(10px,4vh,50px);
+    margin-top: 0px;
     text-shadow: 2px 2px 5px #00000050;
     letter-spacing: .025rem;
   }
@@ -562,10 +610,12 @@
     margin-right: auto;
   } 
 
-  .content-holder.full-width-content{
+  .content-holder.full-width-content {
     width: 95%;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 70px auto 40px;
+    padding: 30px;
+    border-radius: 15px;
   }
 
   .white{
@@ -576,11 +626,19 @@
     background-color: var(--darkblue);
   }
 
-  .line{
-    width: 90%;
+  .line {
+    width: 95%;
     height: 3px;
     border-radius: 50px;
-    margin: 30px auto;
+    margin: 20px auto 20px;
+  }
+
+  .line.top-heavy{
+    margin: 10px auto 20px;
+  }
+
+  .line.bottom-heavy{
+    margin: 20px auto 10px;
   }
 
   .column-full{
@@ -649,7 +707,7 @@
 
   .column-text h2, .column-full h2{
     margin-top: 0;
-    font-size: clamp(1.5rem, calc(.1rem + 3vw), 2rem);
+    font-size: clamp(1.5rem, calc(.1rem + 5vw), 2.5rem);
     letter-spacing: .08rem;
   }
 
@@ -670,13 +728,11 @@
   #services ul > li{
     display: block;
     font-size: clamp(.7rem, calc(.1rem + 2vw), 1rem);
-    width: 100%;
+    width: 90%;
     margin: .5rem 0;
     text-align: center;
     text-transform: uppercase;
     font-weight: 300;
-    color:hsl(from var(--darkblue) h 0 100);
-    background-color: var(--darkblue);
     transition: all 300ms ease;
     cursor: pointer;
     border-radius: 100px;
@@ -685,8 +741,7 @@
 
   #services ul > li:hover{
     width: 98%;
-    color:hsl(from var(--darkblue) h 0 100);
-    background-color: hsl(from var(--darkblue) h s 43);
+    color:hsl(from var(--darkblue) h s 40);
     box-shadow: 0px 2px 15px #0000009c;
   }
 
@@ -706,7 +761,6 @@
   }
 
   #landscaping .column-full{
-    margin: 30px auto;
     justify-items: left;
     justify-content: left;
     text-align: left;
@@ -719,10 +773,12 @@
 /* Landscape phones and down */
 @media only screen and (max-width: 480px) {
 
-  .content-holder, .content-holder.full-width-content{
+  .content-holder, .content-holder.full-width-content {
     width: 90%;
     height: max-content;
     margin: 0 auto;
+    padding: 30px;
+    border-radius: 15px;
   }
 
   .mobile-hidden{
@@ -938,7 +994,7 @@
 
   /* --- SECTIONS --- */
 
-  section{
+  section {
       position: relative;
       width: 100%;
       height: max-content;
@@ -950,7 +1006,6 @@
       z-index: -15;
   }
   .section-center{
-      padding: 50px 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -1179,10 +1234,11 @@
 /* Landscape phone to portrait tablet */
 @media (min-width: 481px) and (max-width: 767px) {
 
-  .content-holder, .content-holder.full-width-content{
+  .content-holder, .content-holder.full-width-content {
     width: 85%;
     height: max-content;
-    margin: 0 auto;
+    padding: 30px;
+    border-radius: 15px;
   }
 
   .mobile-hidden{
@@ -1406,10 +1462,11 @@
 
   /* --- SECTIONS --- */
 
-  section{
+  section {
       position: relative;
       width: 100%;
-      height: max-content;
+      height: 100%;
+      min-height: max-content;
       display: flex;
       flex-direction: column;
       transform-style: preserve-3d;
@@ -1417,9 +1474,7 @@
       overflow: hidden;
       z-index: -15;
   }
-  .section-center{
-      padding: 50px 0;
-      height: max-content;
+  .section-center {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1427,7 +1482,7 @@
       text-align: center;
       transform-style: preserve-3d;
   }
-  .section-left{
+  .section-left {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1581,61 +1636,89 @@
 
 @media only screen and (max-width: 767px) {
 
-  .line{
+  .line {
     width: 99%;
   }
 
-  .column-image{ 
+  .column-image { 
     min-height: clamp(200px,33vh, 350px);
   }
 
-  .column-full{
+  .column-full {
     width: 100%;
   }
 
-  #services .column-2{
+  #services .column-2 {
     flex-wrap: wrap-reverse;
   }
 
-  .column-2, .column-full, .column-text, .column-image{
+  .column-2, .column-full, .column-text, .column-image {
     max-width: unset;
     width: 100%;
   }
 
-  #services{
+  #services {
     height: max-content !important;
   }
 
-  #services ul{
+  #services ul {
     height: clamp(32ex, 100%, 36ex);
   }
 
-  .mobile-call, .mobile-mail{
-    position: absolute;
-    top: 110px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+  .list-line{
+    height: 50%;
+    width: 2px;
+    border-radius: 50px;
+    background-color: #ffffffb6;
   }
 
-  .mobile-call > a, .mobile-mail > a{
+  .contact-nav{
+    color: var(--white);
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 100px;
+    height: 50px;  
+    align-items: center;
+    width: 100%;
+    background-color: var(--darkblueAlpha);  
+    font-size: clamp(0.5rem, calc(.1rem + 2vw), 1rem);
+  }
+
+  .contact-nav a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    font-weight: 1000;
+  }
+
+  .contact-nav div {
+    align-content: center;
+  }
+
+  #phone-icon, #email-icon {
+    display: block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     cursor: pointer;
     display: block;
-    
+    position: relative;
   }
 
-  .mobile-call{
-    height: 30px;
-    width: 30px;
-    left: 10px;
+  #phone-icon {
+    height: 25px;
+    width: auto;
+    aspect-ratio: 1 / 2;
     background-image: var(--phone-icon);
   }
-  .mobile-mail{
-    height: 30px;
-    width: 60px;
-    left: 30px;
+  #email-icon {
+    height: 25px;
+    width: auto;
+    aspect-ratio: 4 / 3;
     background-image: var(--mail-icon);
   }
 
@@ -1645,7 +1728,6 @@
 
   #services{
     height: max-content !important;
-    padding: 100px 0 60px !important;
   }
 
   .nav-links a{
@@ -1826,17 +1908,15 @@
 
   /* --- SECTIONS --- */
 
-  section{
+  section {
       position: relative;
-      height: 100%;
       min-height: max-content;
-      padding: 50px 0;
       width: 100%;
       display: flex;
       flex-direction: column;
       transform-style: preserve-3d;
   }
-  .section-center{
+  .section-center {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1844,7 +1924,7 @@
       text-align: center;
       transform-style: preserve-3d;
   }
-  .section-left{
+  .section-left {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1854,7 +1934,7 @@
   }
 
   /* --- LANDING SECTION & PARALLAX --- */
-  #landing{
+  #landing {
 
       align-items: center;
       justify-content: center;
@@ -1868,7 +1948,7 @@
       flex-wrap: wrap;
   }
 
-  #welcome{
+  #welcome {
     position: relative;
     font-size: clamp(.6rem, 2rem, calc(.1rem + 3vw)) !important;
     text-transform: uppercase;
@@ -1879,7 +1959,7 @@
     font-size: 2em;
   }
 
-  #landing-text a{
+  #landing-text a {
     text-decoration: none;
     font-style: bold;
     color: var(--white);
@@ -1970,7 +2050,15 @@
     display: block;
     padding: 10px;
   }
+
+  .content-holder.full-width-content {
+    max-width: 1000px;
+    margin: 120px auto 40px;
+    padding: 30px;
+    border-radius: 15px;
+  }
 }
+
 
 /* Large desktop */
 @media (min-width: 1200px) {
@@ -2039,9 +2127,8 @@
 
   /* --- SECTIONS --- */
 
-  section{
+  section {
       position: relative;
-      height: 100%;
       min-height: max-content;
       width: 100%;
       display: flex;
@@ -2196,9 +2283,11 @@
     padding: 10px;
   }
 
-  .content-holder.full-width-content{
+  .content-holder.full-width-content {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 120px auto 40px;
+    padding: 30px;
+    border-radius: 15px;
   }
 
   .content-holder{

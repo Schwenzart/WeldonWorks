@@ -124,6 +124,11 @@
     color: var(--darkblue);
   }
 
+  .section-center:nth-of-type(odd) .content-holder .column-full{
+    background-color: var(--darkblue);
+    color: var(--white);
+  }
+
   .section-center:nth-of-type(even) .content-holder{
     background-color: var(--darkblue);
     color: var(--white);
@@ -648,7 +653,7 @@
   }
 
   .column-full{
-    margin: 30px auto;
+    margin: 15px auto;
     text-align: left;
     display: flex;
     flex-direction: row;
@@ -658,6 +663,12 @@
     row-gap: 10px;
     column-gap: 20px;
     width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .clear-margin-bottom {
+    margin-bottom: 0 !important;
   }
 
 
@@ -767,18 +778,14 @@
     background-image: url("Assets/Images/Landscaping-image.jpg");
   }
 
-  #landscaping .column-text p, #landscaping .column-text h3{
-    text-align: left;
+  #landscaping .column-text{
+    text-align: right;
   }
 
   #landscaping .column-full{
-    justify-items: left;
-    justify-content: left;
-    text-align: left;
-  }
-
-  #landscaping .column-text p{
-
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .section {
@@ -1659,8 +1666,16 @@
     width: 99%;
   }
 
+  .column-image.mobile-short {
+    min-height: clamp(150px,15vh, 250px)
+  }
+
   .column-image { 
-    min-height: clamp(200px,33vh, 350px);
+    min-height: clamp(150px,25vh, 350px);
+  }
+
+  #landscaping .column-text p, #landscaping .column-text h3{
+    text-align: justify;
   }
 
   .column-full {

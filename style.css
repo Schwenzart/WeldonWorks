@@ -125,6 +125,8 @@
   }
 
   .section-center:nth-of-type(odd) .content-holder .column-full{
+    box-shadow: inset 0px 5px 50px #00000093;
+    text-shadow: inset 0px 5px 5px #00000050;
     background-color: var(--darkblue);
     color: var(--white);
   }
@@ -364,7 +366,7 @@
     z-index: 1000;
     width: min(800px, 90%);
     height: max-content;
-    margin: 30px 0;
+    margin: 70px 0 0;
   } 
 
   .contact-container h1{
@@ -778,8 +780,8 @@
     background-image: url("Assets/Images/Landscaping-image.jpg");
   }
 
-  #landscaping .column-text{
-    text-align: right;
+  #landscaping .column-text p, #landscaping .column-text h3 {
+    text-align: right !important;
   }
 
   #landscaping .column-full{
@@ -1674,8 +1676,8 @@
     min-height: clamp(150px,25vh, 350px);
   }
 
-  #landscaping .column-text p, #landscaping .column-text h3{
-    text-align: justify;
+  #landscaping .column-text p, #landscaping .column-text h3 {
+    text-align: justify !important;
   }
 
   .column-full {
@@ -1754,6 +1756,10 @@
     width: auto;
     aspect-ratio: 4 / 3;
     background-image: var(--mail-icon);
+  }
+
+  .contact-container {
+    margin: 30px 0 0;
   }
 
 }

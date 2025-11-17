@@ -501,6 +501,11 @@
     cursor: pointer !important;
   }
 
+  .sidebar {
+    background: linear-gradient(-90deg, var(--darkblue) 90%, #162183fb 100%);
+    height: max-content !important;
+  }
+
   /* Landing CSS */
 
   #landing::after{
@@ -798,6 +803,7 @@
 
 
 
+
 /* Landscape phones and down */
 @media only screen and (max-width: 480px) {
 
@@ -831,20 +837,18 @@
   }
 
   .sidebar {
-    translate: 100%;
+    translate: calc(100% + 6px);
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: top;
     justify-content: left;
-    top: max(calc(10vh - 1px),99px);
-    left: calc(100% - min(80vw, 350px));
+    top: calc(max(calc(10vh - 1px),99px));
+    left: calc(100% - min(80vw, 300px) - 6px);
     width: 80vw;
-    max-width: 350px;
-    min-height: max(90vh, calc(100% - 99px));
+    max-width: 300px;
     transform: translateZ(1px);
     z-index: 900;
-    background-color: var(--darkblue);
     opacity: 98%;
     transition: var(--nav-anim-timing);
   }  
@@ -854,9 +858,6 @@
     align-items: center;
     transition: 0.3s;
     height: 4rem;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.2);
-    border-bottom: 2px solid var(--white);
-    margin-bottom: -2px;
   }
 
   .sidebar > div > a {
@@ -875,7 +876,6 @@
   .sidebar> div:hover{
     background-color: var(--white);
     box-shadow: 3px 0px 2px var(--white);
-    border-bottom: 2px solid var(--white);
     z-index: 1006;
   }
 
@@ -1291,20 +1291,18 @@
   }
 
   .sidebar {
-    translate: 100%;
+    translate: calc(100% + 6px);
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: top;
     justify-content: left;
-    top:max(calc(10vh - 1px),99px);
-    left: calc(100% - min(80vw, 349px));
+    top:calc(max(calc(10vh - 1px),99px));
+    left: calc(100% - min(80vw, 350px) - 6px);
     width: 80vw;
     max-width: 350px;
-    min-height: max(90vh, calc(100% - 99px));
     transform: translateZ(1px);
     z-index: 900;
-    background-color: var(--darkblue);
     opacity: 98%;
     transition: var(--nav-anim-timing);
   }  
@@ -1314,9 +1312,6 @@
     align-items: center;
     transition: 0.3s;
     height: 4rem;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.2);
-    border-bottom: 2px solid var(--white);
-    margin-bottom: -2px;
   }
 
   .sidebar > div > a {
@@ -1335,7 +1330,6 @@
   .sidebar> div:hover{
     background-color: var(--white);
     box-shadow: 3px 0px 2px var(--white);
-    border-bottom: 2px solid var(--white);
     z-index: 1006;
   }
 
@@ -1434,6 +1428,7 @@
     align-items: center;
     justify-content: space-around;
     position: relative;
+    
 
   }
 
@@ -1710,6 +1705,7 @@
 
   .contact-nav{
     color: var(--white);
+    text-align: center;
     justify-content: center;
     display: flex;
     gap: 10px;
@@ -1719,18 +1715,26 @@
     height: 40px;  
     align-items: center;
     width: calc(100% - 6px);
-    background-color: var(--darkblueAlpha);  
+    background: linear-gradient(var(--darkblue) 10%, #162183a9 100%);
+    box-shadow: 0px 5px 6px #00000056;
     font-size: clamp(0.5rem, calc(.1rem + 2vw), 1rem);
   }
 
   .contact-nav a{
+    box-sizing: border-box;
+    align-self: center;
+    display: block;
+    text-align: center;
     text-decoration: none;
     cursor: pointer;
     color: white;
-    font-weight: 1000;
+    min-width: 30px;
+    font-weight: 500;
   }
 
   .contact-nav div {
+    justify-items: center;
+    justify-content: center;
     align-content: center;
   }
 
@@ -1911,6 +1915,7 @@
     height: calc(100% - 69px);
   }
   .nav-container {
+    box-shadow: inset 0px 2px 5px #0000001a;
     width: 100%;
     height: 100%;
     margin: 0 auto;

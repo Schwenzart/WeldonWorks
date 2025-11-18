@@ -60,7 +60,7 @@
     font-weight: 100;
   }
 
-  .wrapper{
+  .wrapper {
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -96,7 +96,7 @@
     color: var(--darkblue) !important;
   }
 
-  .section-center:nth-of-type(even) .content-holder > .title {
+  .section-center:nth-of-type(even) .content-holder:not(.contact-container) > .title {
     box-shadow: inset 0px 5px 5px #00000048;
     text-shadow: 2px 0px 5px #0000002f;
     padding: .5ex;
@@ -106,7 +106,7 @@
     border-radius: 10px;
   }
 
-  .section-center:nth-of-type(odd) .content-holder > .title {
+  .section-center:nth-of-type(odd) .content-holder:not(.contact-container) > .title {
     box-shadow: inset 0px 5px 5px #00000048;
     text-shadow: 2px 0px 5px #0000002f;
     padding: .5ex;
@@ -123,19 +123,19 @@
     color: var(--white) !important;
   }
 
-  .section-center:nth-of-type(odd) .content-holder{
+  .section-center:nth-of-type(odd) .content-holder:not(.contact-container){
     background-color: var(--white);
     color: var(--darkblue);
   }
 
-  .section-center:nth-of-type(odd) .content-holder .column-full.contact-prompt{
+  .section-center:nth-of-type(odd) .content-holder:not(.contact-container) .column-full.contact-prompt{
     box-shadow: inset 0px 5px 50px #00000093;
     text-shadow: inset 0px 5px 5px #00000050;
     background-color: var(--darkblue);
     color: var(--white);
   }
 
-  .section-center:nth-of-type(even) .content-holder{
+  .section-center:nth-of-type(even) .content-holder:not(.contact-container){
     background-color: var(--darkblue);
     color: var(--white);
   }
@@ -386,7 +386,6 @@
     z-index: 1000;
     width: 100%;
     height: 100%;
-    padding: 60px 0 50px 0;
     min-height: max-content;
     display: flex;
     flex-wrap: wrap;
@@ -398,7 +397,6 @@
     z-index: 1000;
     width: min(800px, 90%);
     height: max-content;
-    margin: 70px 0 0;
   } 
 
   .contact-container h1{
@@ -421,7 +419,7 @@
   /* Style inputs with type="text", select elements and textareas */
   input[type=text], input[type=email], select, textarea {
     width: 100%;
-    height: clamp(30px, 8vh , 40px);
+    height: clamp(20px, 4vh , 30px);
     color: var(--darkblue);
     padding: 6px 6px 6px 20px;
     border: 1px solid #ccc;
@@ -430,7 +428,7 @@
     margin-top: 5px;
     margin-bottom: 5px;
     resize: vertical;
-    font-size: clamp(.3rem, calc(.1rem + 2vw), 1rem);
+    font-size: clamp(.3rem, calc(.1rem + 2vw), .8rem);
     letter-spacing: .1rem;
     text-decoration: none;
     font-weight: 300;
@@ -448,7 +446,7 @@
     color: rgba(0, 0, 0, 0.596)
   }
   textarea{
-    height: clamp(40px, 120px, 15vh);
+    height: clamp(50px, 25vh, 200px);
     box-shadow: inset 2px 2px 3px #0000001a;
   }
 
@@ -457,7 +455,7 @@
     background-color: #d6d6d6;
     box-shadow: inset 0px 2px 5px #eeeeee63;
     color: var(--darkblue);
-    font-size: clamp(.5rem, 2rem, .1rem + 4vw);
+    font-size: clamp(1rem, calc(.1rem + 3vw), 1.5rem);
     font-weight: 1000;
     text-transform: uppercase;
     padding: 8px 20px;
@@ -466,6 +464,7 @@
     cursor: pointer;
     transition: .3s ease;
     width: 60%;
+    max-width: 300px;
     margin-top: 20px;
   }
   
@@ -944,8 +943,7 @@
     position: fixed;
     left: 0;
     width: 100%;
-    height: 10vh;
-    min-height: 100px;
+    height: 80px;
     background: var(--darkblue);
     display: flex;
     align-items: center;
@@ -962,7 +960,7 @@
     flex-direction: column;
     align-items: top;
     justify-content: left;
-    top: calc(max(calc(10vh - 1px),99px));
+    top: calc(max(calc(10vh - 1px),79px));
     transform: translateZ(1px);
     z-index: 900;
     transition: var(--nav-anim-timing);
@@ -1046,9 +1044,9 @@
     width: var(--hamburger-total-height);
   }
 
-  .wrapper{
-    top: clamp(100px, 10vh, 10vh);
-    height: calc(100vh - clamp(100px, 20vh, 10vh));
+  .wrapper {
+    top: 80px;
+    height: calc(100vh - 80px);
     perspective: 100px;
     transform-style: preserve-3d;
     overflow-x: hidden;
@@ -1361,8 +1359,7 @@
     position: fixed;
     left: 0;
     width: 100%;
-    height: 10vh;
-    min-height: 100px;
+    height: 80px;
     background: var(--darkblue);
     display: flex;
     align-items: center;
@@ -1379,7 +1376,7 @@
     flex-direction: column;
     align-items: top;
     justify-content: left;
-    top:calc(max(calc(10vh - 1px),99px));
+    top:calc(max(clamp(79px, calc(10vh - 1px), 100px), 79px));
     transform: translateZ(1px);
     z-index: 900;
     transition: var(--nav-anim-timing);
@@ -1472,9 +1469,9 @@
     width: var(--hamburger-total-height);
   }
 
-  .wrapper{
-    top: clamp(100px, 10vh, 10vh);
-    height: calc(100vh - clamp(100px, 10vh, 10vh));
+  .wrapper {
+    top: 80px;
+    height: calc(100vh - 80px);
     perspective: 100px;
     transform-style: preserve-3d;
     overflow-x: hidden;
@@ -1703,9 +1700,19 @@
 
 @media only screen and (max-width: 767px) {
 
-  nav:not(.monile-nav){
+  #contact {
+    scroll-margin: 0;
+  }
+
+  #contact .content-holder {
+    margin: 50px 0 20px;
+    padding: 0;
+  }
+
+  nav:not(.mobile-nav){
     box-shadow: 0 2px 100px rgba(0,0,0,1), 0 2px 100px rgba(0,0,0,1), 0 2px 50px rgba(0,0,0,1);
   }
+
   #nav-top-center{
     width: 100%;
     height: 100%;
@@ -1775,7 +1782,7 @@
     display: flex;
     gap: 10px;
     position: absolute;
-    top: 100px;
+    top: 80px;
     left: 0px;
     height: 40px;  
     align-items: center;
@@ -1783,7 +1790,7 @@
     background: linear-gradient(black 10%, #000000c5 100%);
     /* background: linear-gradient(#162183ec 5%, #162183a9 100%); */
     box-shadow: 0px 5px 6px #00000056;
-    font-size: clamp(0.5rem, calc(.1rem + 2vw), 1rem);
+    font-size: clamp(0.5rem, calc(.1rem + 2vw), .8rem);
   }
 
   .contact-nav a{
@@ -1828,16 +1835,19 @@
     aspect-ratio: 4 / 3;
     background-image: var(--mail-icon);
   }
-
-  .contact-container {
-    margin: 30px 0 0;
-  }
-
 }
 
 @media only screen and (min-width:768px) {
 
-  
+  #contact{
+    justify-content: end;
+  }
+
+  #contact .contact-container{
+    margin-bottom: 5%;
+  }
+
+
 
   .section{
     scroll-margin: 60px;
@@ -2001,7 +2011,7 @@
     z-index: 1000;
   }
 
-  .wrapper{
+  .wrapper {
     top: 69px;
     height: calc(100% - 69px);
   }
@@ -2226,7 +2236,7 @@
     z-index: 1000;
   }
 
-  .wrapper{
+  .wrapper {
     top: 69px;
     height: calc(100% - 69px);
   }

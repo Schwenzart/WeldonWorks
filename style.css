@@ -217,6 +217,10 @@
     bottom: 0px;
   }
 
+  .logo > div > a{
+    border: groove #0000001c;
+  }
+
 
   .scroll-anchor{
     position: relative;
@@ -760,8 +764,11 @@
     row-gap: 10px;
     column-gap: 20px;
     width: 100%;
-    padding: 15px;
     border-radius: 10px;
+  }
+
+  .column-full.contact-prompt{
+    padding: 15px;
   }
 
   .clear-margin-bottom {
@@ -814,12 +821,12 @@
     text-align: center;
   }
 
-  .column-text h3{
+  .column-text h3, .column-full h3{
     font-size: clamp(.8rem, calc(.1rem + 1.5vw), 1.2rem);
     letter-spacing: .08rem;
   } 
   
-  .column-full h3{
+  .column-full.contact-prompt h3{
     font-size: clamp(1.2rem, calc(.1rem + 2vw), 1.4rem);
     letter-spacing: .08rem;
   }
@@ -830,10 +837,7 @@
     letter-spacing: .08rem;
   }
 
-  #services .column-image{
-    background-image: url("Assets/Images/services-image.jpg");
-    background-size: cover;
-  }
+
 
   #services ul {
     align-content: start;
@@ -871,10 +875,21 @@
     display: block;
   }
 
+  /* Section Images */
 
+  #services .column-image{
+    background-image: url("Assets/Images/Garden-maintenance.png");
+    background-size: cover;
+  }
 
   #landscaping .column-image{
     background-image: url("Assets/Images/Landscaping-image.jpg");
+  }
+
+  #garden-design .column-image {
+    background-image: url("Assets/Images/garden-design-image.jpg");
+    background-position: center;
+    background-size: cover;
   }
 
   #patios .column-image {
@@ -883,11 +898,31 @@
     background-size: cover;
   }
 
+  #driveways .column-image {
+    background-image: url("Assets/Images/driveway-image.jpg");
+    background-position: bottom right;
+    background-size: cover;
+  }
+
   #fencing .column-image {
     background-image: url("Assets/Images/Fencing-image.jpg");
     background-position: right top;
     background-size: cover;
   }
+
+  #turf .column-image {
+    background-image: url("Assets/Images/Turf-image.jpg");
+    background-position: center right;
+    background-size: cover;
+  }
+
+  #garden-maintenance .column-image {
+    background-image: url("Assets/Images/Garden-maintenance (2).png");
+    background-position: bottom top;
+    background-size: cover;
+  }
+
+
 
   .column-text.right-align p, .column-text.right-align h3{
     text-align: right !important;

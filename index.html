@@ -29,14 +29,14 @@
         <div class="mobile-hidden" id="nav-top-right"><a id="email-icon" href="mailto:weldonworkslandscape@hotmail.com">Email Us</a></div>
       </div>        
         <div class="nav-links mobile-hidden">
-            <a onclick="scrollToID('me')">ABOUT US</a>                
-            <a onclick="scrollToID('services')">OUR SERVICES</a>
-            <a onclick="scrollToID('patios')">PATIOS</a>
-            <a onclick="scrollToID('fencing')">FENCING</a>                             
-            <a onclick="scrollToID('garden-maintenance')">GARDEN MAINTENANCE</a> 
-            <a onclick="scrollToID('contact')">CONTACT US</a>
+            <div><a onclick="scrollToID('me')">ABOUT US</a>  </div>              
+            <div><a onclick="scrollToID('services')">OUR SERVICES</a></div>
+            <div><a onclick="scrollToID('patios')">PATIOS &amp; PAVING</a></div>
+            <div><a onclick="scrollToID('fencing')">FENCING &amp; DECKING</a></div>                           
+            <div><a onclick="scrollToID('garden-maintenance')">GARDEN MAINTENANCE</a></div>
+            <div><a onclick="scrollToID('contact')">CONTACT US</a></div>
             <a id="nav-instagram" href="https://www.instagram.com/weldonworkslandscaping" target="_blank" rel="noopener noreferrer"></a>
-
+            <a id="nav-facebook" href="https://www.facebook.com/weldonworkslandscape/?locale=en_GB" target="_blank" rel="noopener noreferrer"></a>
           </div>      
           <div class="contact-nav mobile-show">
             <div><a onclick="scrollToID('contact')">CONTACT US</a></div>
@@ -53,8 +53,8 @@
           <aside class="sidebar mobile-show">
             <div class="icon-link"><a onclick="scrollToID('me')">ABOUT US</a>  </div>              
             <div class="icon-link"><a onclick="scrollToID('services')">OUR SERVICES</a></div>
-            <div class="icon-link"><a onclick="scrollToID('patios')">PATIOS</a></div>
-            <div class="icon-link"><a onclick="scrollToID('fencing')">FENCING</a></div>                             
+            <div class="icon-link"><a onclick="scrollToID('patios')">PATIOS &amp; PAVING</a></div>
+            <div class="icon-link"><a onclick="scrollToID('fencing')">FENCING &amp; DECKING</a></div>                             
             <div class="icon-link"><a onclick="scrollToID('garden-maintenance')">GARDEN MAINTENANCE</a></div> 
             <div class="icon-link"><a onclick="scrollToID('contact')">CONTACT US</a></div>            
             <div class= "icon-link" id="instagram"><a href="https://www.instagram.com/weldonworkslandscaping" target="_blank" rel="noopener noreferrer">INSTAGRAM</a></div>
@@ -67,10 +67,10 @@
      <div class ="scroll-anchor" id="landing-scroll-anchor"></div>
     <div class="section" id="landing">                
       <div class="landing-header landing-panel">
-        <div id="tag1">
+        <div class="groove" id="tag1">
           <div class="line-logo"></div> 
         </div>
-        <div class="landing-panel" id="tag2">
+        <div class="groove" class="landing-panel" id="tag2">
           <p>In and around Barnsley</p>
         </div>
       </div>
@@ -83,9 +83,8 @@
     <!-- ABOUT SECTION -->
     <div class="section section-center "id="me">
       
-      <div class = "content-holder full-width-content">
-        <h2>About Us</h2>
-        <div class="blue line top-heavy"></div>
+      <div class = "content-holder groove full-width-content">
+        <h2 class="title"contact-prompt >About Us</h2>
         <p>
           At Weldon Works we believe Landscaping & Garden Maintenance are built on recommendation and reputation, so we cover all aspects of <a onclick="scrollToID('landscaping')">Hard &amp; Soft Landscaping</a>.
         </p>
@@ -105,17 +104,15 @@
         <p>
           Based in Worsbrough, our landscaping team are here to help so <a onclick="scrollToID('contact')">contact us today</a> .
         </p>
-        <div class="blue line"></div>
       </div>
     </div>
 
     <!-- SERVICES -->
 
     <div class="section section-center "id="services">  
-      <div class = "content-holder full-width-content">
-        <h2>Our Services</h2>
+      <div class = "content-holder groove full-width-content">
+        <h2 class="title">Our Services</h2>
         <!-- <div class="blue line"></div> -->
-         <br>
         <div class="column-2">
           <div class="column-image">
 
@@ -129,7 +126,7 @@
               <li><a onclick="scrollToID('landscaping')">Hard &amp; Soft Landscaping</a></li>
               <li><a onclick="scrollToID('garden-design')">Garden Design</a></li>
               <li><a onclick="scrollToID('patios')">Patios &amp; Paving</a></li>
-              <li><a onclick="scrollToID('driveways')">Driveways &amp; Block Paving</a></li>
+              <li><a onclick="scrollToID('patios')">Driveways &amp; Block Paving</a></li>
               <li><a onclick="scrollToID('fencing')">Fencing</a></li>
               <li><a onclick="scrollToID('turf')">Turf &amp; Artificial Grass</a></li>
               <li><a onclick="scrollToID('garden-maintenance')">Garden Maintenance</a></li>
@@ -143,21 +140,24 @@
     <!-- LANDSCAPING -->
 
     <div class="section section-center "id="landscaping">  
-      <div class = "content-holder full-width-content">
-        <h2>Hard &amp; Soft Landscaping</h2>
-        <br>
+      <div class = "content-holder groove full-width-content">
+        <h2 class="title">Hard &amp; Soft Landscaping</h2>
         <div class="column-2">
 
-          <div class="column-text">
-            <h3>At Weldon Works we create beautiful and inspiring landscapes throught Barnsley to live, work and play in.</h3><br> <p>We take huge pride in our exceptional attention to detail, expert plant knowledge, creative solutions and award winning standards of workmanship.</p>
+          <div class="column-text right-align">
+            <h3>At Weldon Works we create beautiful and inspiring landscapes throught Barnsley to live, work and play in.</h3>
+            <br> 
+            <p>We take huge pride in our exceptional attention to detail, expert plant knowledge, creative solutions and award winning standards of workmanship.</p>
             <br>
-            <p>The design and construction of garden features is a specialty of Weldon Works; From decking in hardwood or softwood and fencing to water features and ponds. </p><br><p>We are also experts in the building of natural stone terraces, decks, walling, pergolas and the laying of driveways, paths and new lawns.</p>
+            <p>The design and construction of garden features is a specialty of Weldon Works; From decking in hardwood or softwood and fencing to water features and ponds. </p>
+            <br>
+            <p>We are also experts in the building of natural stone terraces, decks, walling, pergolas and the laying of driveways, paths and new lawns.</p>
           </div>          
           <div class="column-image mobile-short">
             
           </div>
         </div>
-        <div class="column-full clear-margin-bottom">
+        <div class="contact-prompt column-full groove clear-margin-bottom">
           <h2>Are You In Need of Inspiration?</h2>
           <p>Get in touch with us if we can help you with anything in the garden. No job is too big or small. </p>
           <a onclick="scrollToID('contact')">CONTACT US TODAY!</a>
@@ -168,8 +168,8 @@
     <!-- Garden Design -->
 
     <div class="section section-center "id="garden-design">  
-      <div class = "content-holder full-width-content">
-        <h2>Garden Design</h2>
+      <div class = "content-holder groove full-width-content">
+        <h2 class="title">Garden Design</h2>
         <div class="column-2">
           <div class="column-image">
 
@@ -184,16 +184,25 @@
     <!-- PATIOS -->
 
     <div class="section section-center "id="patios">  
-      <div class = "content-holder full-width-content">
-        <h2>Patios &amp; Paving</h2>
+      <div class = "content-holder groove full-width-content">
+        <h2 class="title">Patios &amp; Paving</h2>
         <div class="column-2">
 
-          <div class="column-text">
-
+          <div class="column-text right-align">
+            <h3>Patios are a perfect outdoor space for entertaining friends and family. Our team of experts will talk you through all of the options that are available to you and your home.</h3>
+            <br>
+            <p>We at <b>Weldon Works</b> have a range of colour schemes and patio stones that will add an aesthetically pleasing finish to your property. So whether you want a rustic patio or something a contemporary edge, we can make it happen. </p>
+            <br>
+            <p>With so many interesting and exciting options to transform your patios and paving, we offer design and consultation to work with you to create <b>exactly</b> what you want.</p>
           </div>          
-          <div class="column-image">
-
+          <div class="column-image mobile-short">
+            
           </div>
+        </div>
+        <div class="contact-prompt column-full clear-margin-bottom">
+          <h2>Are You In Need of a new Patio?</h2>
+          <p>Get in touch with us to discuss what we can do for you. No job is too big or small.</p>
+          <a onclick="scrollToID('contact')">CONTACT US TODAY!</a>
         </div>
       </div>
     </div>
@@ -201,8 +210,8 @@
     <!-- DRIVEWAYS -->
 
     <div class="section section-center "id="driveways">  
-      <div class = "content-holder full-width-content">
-        <h2>Driveways &amp; Block Paving</h2>
+      <div class = "content-holder groove full-width-content">
+        <h2 class="title">Driveways &amp; Block Paving</h2>
         <div class="column-2">
           <div class="column-image">
 
@@ -216,17 +225,26 @@
 
     <!-- FENCING -->
 
-    <div class="section section-center" id="fencing">  
-      <div class = "content-holder full-width-content">
-        <h2>Fencing</h2>
+    <div class="section section-center "id="fencing">  
+      <div class = "content-holder groove full-width-content">
+        <h2 class="title">Fencing &amp; Decking</h2>
         <div class="column-2">
 
-          <div class="column-text">
-
+          <div class="column-text right-align">
+            <h3>At Weldon Works, we provide premium, and affordable, fencing and decking services.  We understand that different homes have different requirements and so we incorporate personalised solutions to meet them.</h3>
+            <br>
+            <p>A large part of our business is domestic garden fencing and gate installations for private homeowners; We have a great reputation for high quality products and installation services and we only use the best quality materials from tried and tested local suppliers.</p>
+            <br>
+            <p> There are a large variety of styles and designs for fencing around your garden and home. Some people prioritise privacy while others choose something subtle and less intrusive on their surroundings. We aim to work with you, your budget and your ideas to create Fencing and Decking made just for you and designed to last.</p>
           </div>          
           <div class="column-image">
-
+            
           </div>
+        </div>
+        <div class="contact-prompt column-full clear-margin-bottom">
+          <h2>Are You In Need of a new Fence Or Decking?</h2>
+          <p>Get in touch with us to discuss what we can do for you. No job is too big or small.</p>
+          <a onclick="scrollToID('contact')">CONTACT US TODAY!</a>
         </div>
       </div>
     </div>
@@ -234,8 +252,8 @@
     <!-- TURF & ARTIFICIAL -->
 
     <div class="section section-center" id="turf">  
-      <div class = "content-holder full-width-content">
-        <h2>Turf &amp; Artificial Grass</h2>
+      <div class = "content-holder groove full-width-content">
+        <h2 class="title">Turf &amp; Artificial Grass</h2>
         <div class="column-2">
           <div class="column-image">
 
@@ -250,8 +268,8 @@
     <!-- GARDEN MAINTENANCE -->
 
     <div class="section section-center "id="garden-maintenance">  
-      <div class = "content-holder full-width-content">
-        <h2>Garden Maintenance</h2>
+      <div class = "content-holder groove full-width-content">
+        <h2 class="title">Garden Maintenance</h2>
         <div class="column-2">
 
           <div class="column-text">

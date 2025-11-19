@@ -4,7 +4,9 @@
     --lightyellow: #fcbf47;
     --verylightyellow: #f3e0ba;
     --darkblue : #162183;
-    --darkbluegradient: linear-gradient(0deg,rgba(11, 19, 87, 1) 0%, rgba(22, 33, 131, 1) 19%, rgba(22, 33, 131, 1) 81%, rgba(34, 46, 153, 1) 100%);
+    --darkerblue: rgba(11, 19, 87, 1);
+    --darkbluegradient: linear-gradient(0deg,rgba(11, 19, 87, 1) 0%, rgb(19, 28, 110) 50%, rgba(11, 19, 87, 1) 100%);
+    --darkerbluegradient: linear-gradient(0deg,rgba(11, 19, 87, 1) 0%, rgb(10, 18, 77) 50%, rgba(11, 19, 87, 1) 100%);
     --concrete: url("Assets/Images/concrete.jpg");
     --darkblueAlpha: #181106dc;
     --lightgrey: #6c7a75;
@@ -88,10 +90,10 @@
   }
 
   .section-center:nth-of-type(even){
-    background-image: var(--concrete) !important;
+    /* background-image: var(--concrete) !important;
     background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: 0px 0px 50px #00000048;
+    background-repeat: no-repeat; */
+    background: var(--darkerbluegradient);
     text-shadow: 2px 0px 5px #0000002f;
     color: var(--darkblue) !important;
   }
@@ -101,8 +103,8 @@
     text-shadow: 2px 0px 5px #0000002f;
     padding: .5ex;
     margin-bottom: 20px;
-    background: var(--white) !important;
-    color: var(--darkblue);
+    background: hsl(from var(--darkblue) h s 20) !important;
+    color: var(--white);
     border-radius: 10px;
   }
 
@@ -118,7 +120,6 @@
 
   .section-center:nth-of-type(odd){
     background: var(--darkbluegradient) !important;
-    box-shadow: 0px 0px 50px #00000079;
     text-shadow: 2px 0px 5px #00000054;
     color: var(--white) !important;
   }
@@ -391,6 +392,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    box-shadow: 0px 10px 50px #0000003d, 0px 0px 10px #0000003d;
   }
 
   .contact-container{
@@ -537,8 +539,9 @@
     align-content: center;
     justify-content: center;
     justify-items: center;
-    min-width: 300px;
-    left: calc(100% - max(80vw,300px));
+    min-width: min(100vw,250px);
+    max-width: 400px;
+    left: min(100vw, calc(100% - clamp(min(100vw,250px), 80vw, 400px)));
     width: 80vw;
     box-shadow: -2px 10px 4px #00000041;
     border-radius: 0px 0px 0px 20px;
@@ -577,8 +580,9 @@
     opacity: 90%;
   }
   
-  .groove{
-    border: ridge #2e2e2e31;
+  .groove, .title{
+    outline: 3px groove #0000003d;
+    outline-offset: -2px;
   }
 
   /* Landing CSS */
@@ -689,6 +693,10 @@
     font-size: clamp(.75rem,calc(.1rem + 1.4vw), 1rem);
     letter-spacing: 0.025rem;
   }
+
+  .content-holder br{
+    line-height: clamp(.75rem, calc(.1rem + 1vw), 1rem);
+  }
   
 
   .content-holder a{
@@ -729,7 +737,7 @@
 
   .column-full{
     margin: 20px auto;
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -742,6 +750,7 @@
   }
 
   .column-full.contact-prompt{
+    text-align: center;
     padding: 15px;
   }
 
@@ -769,6 +778,9 @@
   }
 
   .column-image{
+    min-height: 100px;
+    outline: 5px groove #0000003d;
+    outline-offset: -3px;
     box-shadow: 0px 2px 5px #0000001a;
     background-image: var(--logo-square);
     background-position: center;
@@ -823,9 +835,12 @@
   }
 
   #services ul > li {
+    outline: 3px groove #00000021;
+    outline-offset: -2px;
     display: block;
     font-size: clamp(.7rem, calc(.1rem + 2vw), 1rem);
-    background-color: hsl(from var(--darkblue) h s 98);
+    background-color: hsl(from var(--darkblue) h s 20);
+    color: white;
     width: 98%;
     margin: .5rem 0;
     text-align: center;
@@ -839,8 +854,8 @@
 
   #services ul > li:hover {
     width: 94%;
-    color: hsl(from var(--darkblue) h s  45);
-    background-color: var(--white);
+    color: hsl(from var(--white) h s 95);
+    background-color: hsl(from var(--darkblue) h s 10);
     box-shadow: 0px 2px 15px #0000009c;
   }
 
@@ -897,6 +912,58 @@
   }
 
 
+  #garden-maintenance .column-text li{
+    text-align: center;
+  }
+
+  #garden-maintenance .column-text > ul{
+    width: 100%;
+    transition: .3s;
+  }
+
+  #garden-maintenance .column-text > ul > * {
+    position: relative;
+    margin: 5px auto;
+  }
+
+  #garden-maintenance .column-text > ul > div > ul {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    margin: 0 auto;
+    width: 100%;
+    transition: .3s;
+    background-color: var(--darkerblue);
+    border-radius: 10px;
+    padding: 8px 8px;
+  }
+
+  #garden-maintenance .column-text > ul > div:hover > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-wrap: row;
+    z-index: 1000;
+  }
+
+  #garden-maintenance .column-text p, #garden-maintenance .column-text li {
+
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: clamp(.75rem, calc(.1rem + 1.4vw), 1rem);
+    border-radius: 50px;
+    background-color: var(--darkblue);
+    color: var(--white);
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 5px 10px;
+    display: block;
+    width: 100%
+  }
+
+
 
   .column-text.right-align p, .column-text.right-align h3{
     text-align: right !important;
@@ -910,7 +977,7 @@
     flex-direction: column;
     justify-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: justify;
   }
 
   .section {
@@ -960,7 +1027,7 @@
     flex-direction: column;
     align-items: top;
     justify-content: left;
-    top: calc(max(calc(10vh - 1px),79px));
+    top: 79px;
     transform: translateZ(1px);
     z-index: 900;
     transition: var(--nav-anim-timing);
@@ -1376,7 +1443,7 @@
     flex-direction: column;
     align-items: top;
     justify-content: left;
-    top:calc(max(clamp(79px, calc(10vh - 1px), 100px), 79px));
+    top: 79px;
     transform: translateZ(1px);
     z-index: 900;
     transition: var(--nav-anim-timing);
@@ -1747,7 +1814,7 @@
   }
 
   .column-full {
-    text-align: center;
+    text-align: justify;
     width: 100%;
   }
 
@@ -1839,9 +1906,7 @@
 
 @media only screen and (min-width:768px) {
 
-  #contact{
-    justify-content: end;
-  }
+
 
   #contact .contact-container{
     margin-bottom: 5%;

@@ -926,21 +926,31 @@
     margin: 5px auto;
   }
 
+  #garden-maintenance .column-text ul > div {
+    overflow: hidden;
+  }
+
+  #garden-maintenance .column-text ul > div:hover {
+    overflow: unset;
+  }
+
   #garden-maintenance .column-text > ul > div > ul {
     position: absolute;
-    top: calc(100% + 5px);
+    bottom: calc(100% + 55px);
     left: 50%;
     transform: translateX(-50%);
-    display: none;
     margin: 0 auto;
     width: 100%;
-    transition: .3s;
     background-color: var(--darkerblue);
     border-radius: 10px;
     padding: 8px 8px;
+    transition: all .5s, opacity .6s;
+    opacity: 0;
   }
 
   #garden-maintenance .column-text > ul > div:hover > ul {
+    opacity: 1;
+    bottom: calc(100% + 5px);
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -951,8 +961,9 @@
   #garden-maintenance .column-text p, #garden-maintenance .column-text li {
 
     text-transform: uppercase;
-    font-weight: 1000;
+    font-weight: 500;
     font-size: clamp(.75rem, calc(.1rem + 1.4vw), 1rem);
+    letter-spacing: .1rem;
     border-radius: 50px;
     background-color: var(--darkblue);
     color: var(--white);
@@ -962,8 +973,6 @@
     display: block;
     width: 100%
   }
-
-
 
   .column-text.right-align p, .column-text.right-align h3{
     text-align: right !important;

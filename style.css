@@ -214,7 +214,6 @@
   }
 
   #landing{
-    background-image: url("Assets/Images/landing-image.jpg");
     position: relative;
     background-size: cover;
     background-position: center;
@@ -296,21 +295,6 @@
     background-position: center;
   }
 
-  .tdPhoto {
-    filter: brightness(0.6);
-    background-image: url("Assets/Images/td.jpg");
-  }
-
-  .photographyPhoto {
-    opacity: 0.5;
-    background-image: url("Assets//Images/Photos.jpg");
-  }
-
-  .gdPhoto {
-    opacity: 0.5;
-    background-image: url("Assets//Images/GraphicDesign.jpg");
-  }
-  
   .nav-links a {
     position: relative;
     top: -2px;
@@ -586,33 +570,29 @@
 
   /* Landing CSS */
 
-  #landing::after{
+  #landing::before{
+    content: '';
     transition: .3s ease-in-out;
-  }
-
-  #landing{
+    background-image: url("Assets/Images/landing-image.jpg");
+    background-size: cover;
+    background-position: center;
     transform: translateZ(-50px) scale(1.5);
     z-index: 40;
-  }
-
-  .landing-logo{
-    max-width: 320px;
-    max-height: 260px;
-    height: auto;
-    width: min(50vh,50vw);
-    aspect-ratio: 3/2;
-    background-image: url("Assets/Images/S Solo.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;   
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 40;
+    position: relative;
+    z-index: 40;
   }
 
   .landing-header{
     text-transform: uppercase !important;
     width: 80%;
-    max-width: 700px;
+    max-width: 500px;
     top: 25%;
     position: absolute;   
+    z-index: 45;
     transform: translateZ(40px) scale(0.66); 
   }
 
@@ -876,12 +856,12 @@
   /* Section Images */
 
   #services .column-image{
-    background-image: url("Assets/Images/Garden-maintenance.png");
+    background-image: url("Assets/Images/garden-maintenance.png");
     background-size: cover;
   }
 
   #landscaping .column-image{
-    background-image: url("Assets/Images/Landscaping-image.jpg");
+    background-image: url("Assets/Images/landscaping-image.jpg");
   }
 
   #garden-design .column-image {
@@ -891,7 +871,7 @@
   }
 
   #patios .column-image {
-    background-image: url("Assets/Images/Patios-image.jpg");
+    background-image: url("Assets/Images/patios-image.jpg");
     background-position: bottom center;
     background-size: cover;
   }
@@ -903,19 +883,19 @@
   }
 
   #fencing .column-image {
-    background-image: url("Assets/Images/Fencing-image.jpg");
+    background-image: url("Assets/Images/fencing-image.jpg");
     background-position: right top;
     background-size: cover;
   }
 
   #turf .column-image {
-    background-image: url("Assets/Images/Turf-image.jpg");
+    background-image: url("Assets/Images/turf-image.jpg");
     background-position: center right;
     background-size: cover;
   }
 
   #garden-maintenance .column-image {
-    background-image: url("Assets/Images/Garden-maintenance (2).png");
+    background-image: url("Assets/Images/garden-maintenance (2).png");
     background-position: bottom top;
     background-size: cover;
   }
@@ -1806,6 +1786,7 @@
 
   .logo a {
       border: none !important;
+      border-radius: 0px !important;
       display: block;
       height:100%;
       width: 100%;
@@ -1974,7 +1955,7 @@
     background-color: var(--darkblue);
     position: relative;
     padding: 0;
-    transition: all 0.6s ease-in-out; 
+    transition: box-shadow 0.6s ease-in-out filter 0.2s ease-in-out; 
     z-index: 101;
     box-shadow: 0px 0px 20px #000000a6;
   }
@@ -2060,7 +2041,7 @@
       font-weight: bold;
       display: block;
       cursor: pointer;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out, border-radius 0s;
   }
 
   .logo > div > a:hover{

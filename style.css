@@ -94,8 +94,8 @@
     /* background-image: var(--concrete) !important;
     background-size: cover;
     background-repeat: no-repeat; */
-    /* background: var(--darkerbluegradient); */
-    
+    background: var(--darkerbluegradient);
+
     text-shadow: 2px 0px 5px #0000002f;
     color: var(--darkblue) !important;
   }

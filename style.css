@@ -53,6 +53,42 @@
     letter-spacing: .2rem;
   }
 
+  .footer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    background-color: black;
+    text-transform: uppercase;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0px 2px 50px black;
+    z-index: 10005;
+  }
+
+  .footer a{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--white);
+  }
+
+  .footer .schwenzLogo{
+    background-image: url("https://schwenz.uk/Assets/Images/Logo.JPG");
+    background-position: center;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    display: block;
+  }
+
+  .schwenzLogo a{
+    height: 100%;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+  }
+
   a{
     cursor: pointer;
   }
@@ -1938,8 +1974,6 @@
   #contact .contact-container{
     margin-bottom: 5%;
   }
-
-
 
   .section{
     scroll-margin: 60px;

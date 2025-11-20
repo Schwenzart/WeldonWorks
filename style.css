@@ -820,7 +820,7 @@
   }
 
   .column-text h4, .column-full h4{
-    font-size: clamp(.6rem, calc(.1rem + 1.5vw), 1rem);
+    font-size: clamp(.8rem, calc(.1rem + 1.5vw), 1rem);
     letter-spacing: .08rem;
   } 
   

@@ -1,17 +1,15 @@
 :root{
-    --yellow: #eea81f;
-    --darkyellow: #c58b18;
-    --lightyellow: #fcbf47;
-    --verylightyellow: #f3e0ba;
     --darkblue : #162183;
-    --darkerblue: rgba(11, 19, 87, 1);
-    --darkbluegradient: linear-gradient(0deg,rgba(11, 19, 87, 1) 0%, rgb(19, 28, 110) 50%, rgba(11, 19, 87, 1) 100%);
-    --darkerbluegradient: linear-gradient(0deg,rgba(11, 19, 87, 1) 0%, rgb(10, 18, 77) 50%, rgba(11, 19, 87, 1) 100%);
+    --darkerblue: #121A69;
+
+    --darkbluegradient: linear-gradient(0deg,rgba(11, 19, 87, 1) 0%, var(--darkblue), rgba(11, 19, 87, 1) 100%);
+    --darkerbluegradient: linear-gradient(0deg,rgba(11, 19, 87, 1) 0%, var(--darkerblue) 50%, rgba(11, 19, 87, 1) 100%);
     --concrete: url("Assets/Images/concrete.jpg");
     --darkblueAlpha: #181106dc;
-    --lightgrey: #6c7a75;
+    --lightgrey: #CCCCCC;
     --greyblue: #4d646a;
     --white: #f9f9f9;
+    --darkgrey: #242424;
     --whitegradient: linear-gradient(180deg,rgb(241, 241, 241) 30%, rgba(255, 255, 255, 1) 100%);
     --search-icon: url("Assets/Images/search-icon.png");
     --logo-square: url("Assets/Images/W-Logo-1248x1248.jpg");
@@ -96,7 +94,8 @@
     /* background-image: var(--concrete) !important;
     background-size: cover;
     background-repeat: no-repeat; */
-    background: var(--darkerbluegradient);
+    /* background: var(--darkerbluegradient); */
+    
     text-shadow: 2px 0px 5px #0000002f;
     color: var(--darkblue) !important;
   }
@@ -104,19 +103,10 @@
   .title {
     padding: .5ex;    
     color: var(--white);
+    background-color: var(--darkerblue);
     border-radius: 10px;
     text-shadow: 2px 0px 5px #0000002f;
   }
-  .section-center:nth-of-type(even) .content-holder:not(.contact-container) > .title {
-    box-shadow: inset 0px 5px 5px #00000048;
-    background: hsl(from var(--darkblue) h s 20) !important;
-  }
-
-  .section-center:nth-of-type(odd) .content-holder:not(.contact-container) > .title {
-    box-shadow: inset 0px 5px 5px #00000048; 
-    background: var(--darkblue) !important;
-  }
-
   .section-center:nth-of-type(odd){
     background: var(--darkbluegradient) !important;
     text-shadow: 2px 0px 5px #00000054;
@@ -131,11 +121,13 @@
   .section-center:nth-of-type(odd) .content-holder:not(.contact-container) .column-full.contact-prompt{
     box-shadow: inset 0px 5px 50px #00000093;
     text-shadow: inset 0px 5px 5px #00000050;
+    
     background-color: var(--darkblue);
     color: var(--white);
   }
 
   .section-center:nth-of-type(even) .content-holder:not(.contact-container){
+    outline: 3px groove #0000001a;
     background-color: var(--darkblue);
     color: var(--white);
   }
@@ -155,6 +147,16 @@
   .section-center:nth-of-type(odd) li{
     background-color: var(--darkblue);
     color: var(--white);
+  }
+
+  .section-center:nth-of-type(even) .title{
+    outline: 3px groove #0000001a;
+    outline-offset: -2px;
+  }
+
+  .section-center:nth-of-type(odd) .title{
+    outline: 3px groove #00000040;
+    outline-offset: -2px;
   }
 
   .section-center:nth-of-type(odd) li:hover{
@@ -563,7 +565,7 @@
     opacity: 90%;
   }
   
-  .groove, .title{
+  .groove{
     outline: 3px groove #0000003d;
     outline-offset: -2px;
   }
@@ -828,7 +830,7 @@
     outline-offset: -2px;
     display: block;
     font-size: clamp(.7rem, calc(.1rem + 2vw), 1rem);
-    background-color: hsl(from var(--darkblue) h s 20);
+    background-color: var(--darkerblue);
     color: white;
     width: 98%;
     margin: .5rem 0;
@@ -844,7 +846,7 @@
   #services ul > li:hover {
     width: 94%;
     color: hsl(from var(--white) h s 95);
-    background-color: hsl(from var(--darkblue) h s 10);
+    background-color: hsl(from var(--darkblue) h s 15);
     box-shadow: 0px 2px 15px #0000009c;
   }
 
@@ -931,7 +933,7 @@
     transform: translateX(-50%);
     margin: 0 auto;
     width: 100%;
-    background-color: var(--darkerblue);
+    background-color: #fffffff3;
     border-radius: 10px;
     padding: 8px 8px;
     transition: all .5s, opacity .6s;
@@ -955,7 +957,7 @@
     font-size: clamp(.75rem, calc(.1rem + 1.4vw), 1rem);
     letter-spacing: .1rem;
     border-radius: 50px;
-    background-color: var(--darkblue);
+    background-color: var(--darkerblue);
     color: var(--white);
     list-style-type: disc;
     list-style-position: inside;

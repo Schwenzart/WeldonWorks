@@ -84,7 +84,7 @@
   }
 
   .content-holder{
-    margin: 30px auto;
+    margin: 15px auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -93,7 +93,7 @@
   .wrapper{
     background: url("Assets/Images/grass-background.jpg");
     background-position: center;
-    background-size: cover;
+    background-size: 75%;
   }
 
   .content-holder:not(.contact-container) {
@@ -111,8 +111,9 @@
   }
 
   .title {
-    width: fit-content;
-    padding: .5ex 1.5ex;
+    min-width: fit-content;
+    width: 80%;
+    padding: 0 1.5ex;
     margin-left: auto;
     margin-right: auto;    
     color: var(--white);
@@ -640,8 +641,9 @@
   #tag1, #tag2{
     padding: 30px;
     color: var(--white);
-    background-color: #00000093;
-    box-shadow: 0px 0px 5px #00000093;
+    background-color: var(--darkblue);
+    opacity: .95;
+    box-shadow: 0px 5px 15px #000000e8, inset 1px 1px 2px #5452c4ea;
     margin: 20px 0;
     z-index: 51;    
     border-radius: 30px;

@@ -54,10 +54,12 @@
   }
 
   .footer{
+    text-align: center !important;
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 80px;
+    min-height: 50px;
+    max-height: max-content;
     background-color: black;
     text-transform: uppercase;
     justify-content: center;
@@ -65,6 +67,12 @@
     align-items: center;
     box-shadow: 0px 2px 50px black;
     z-index: 10005;
+    padding: 10px;
+  }
+
+  .footer p{
+    transform: scale(0.9);
+    margin-bottom: 10px;
   }
 
   .footer a{

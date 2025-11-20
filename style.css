@@ -69,18 +69,18 @@
     overflow-x: hidden;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    box-shadow: inset 0px 0px 250px #00000093, inset 10px 0px 20px #000000a6;
     /* scroll-snap-type: y proximity; */
   }
 
-  .wrapper:after{
-    width: 100%;
-    height: 100%;
+  .wrapper::after{
+    width: 100vw;
+    height: 100vh;
     content: '';
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
-    box-shadow: inset 0px 0px 250px #00000093;
-    box-shadow: inset 10px 0px 20px #000000a6;
+
   }
 
   .content-holder{
@@ -90,35 +90,61 @@
     gap: 15px;
   }
 
+  .wrapper{
+    background: url("Assets/Images/grass-background.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .content-holder:not(.contact-container) {
+    box-shadow: 0px 5px 20px #000000, 0px 0px 100px #0000001a;
+  }
+
   .section-center:nth-of-type(even){
     /* background-image: var(--concrete) !important;
     background-size: cover;
     background-repeat: no-repeat; */
-    background: var(--darkerbluegradient);
+    /* background: var(--darkerbluegradient); */
 
     text-shadow: 2px 0px 5px #0000002f;
     color: var(--darkblue) !important;
   }
 
   .title {
-    padding: .5ex;    
+    width: fit-content;
+    padding: .5ex 1.5ex;
+    margin-left: auto;
+    margin-right: auto;    
     color: var(--white);
     background-color: var(--darkerblue);
-    border-radius: 10px;
+    border-radius: 1000px;
     text-shadow: 2px 0px 5px #0000002f;
   }
   .section-center:nth-of-type(odd){
-    background: var(--darkbluegradient) !important;
+    /* background: var(--darkbluegradient) !important; */
     text-shadow: 2px 0px 5px #00000054;
+    
+    color: var(--darkblue) !important;
+  }
+
+  .section-center:nth-of-type(odd) .title{
+    /* background: var(--darkbluegradient) !important; */
+    background-color: var(--darkerblue);
     color: var(--white) !important;
   }
 
-  .section-center:nth-of-type(odd) .content-holder:not(.contact-container){
+  .section-center:nth-of-type(even) .title{
+    /* background: var(--darkbluegradient) !important; */
+    background-color: var(--white);
+    color: var(--darkblue) !important;
+  }
+
+  .section-center:nth-of-type(odd):not(#landing) .content-holder:not(.contact-container){
     background-color: var(--white);
     color: var(--darkblue);
   }
 
-  .section-center:nth-of-type(odd) .content-holder:not(.contact-container) .column-full.contact-prompt{
+  .section-center:nth-of-type(odd):not(#landing) .content-holder:not(.contact-container) .column-full.contact-prompt{
     box-shadow: inset 0px 5px 50px #00000093;
     text-shadow: inset 0px 5px 5px #00000050;
     
@@ -220,6 +246,7 @@
     background-size: cover;
     background-position: center;
     z-index: -100;
+    transform: translateZ(-50px);  
   }
 
   .icon-link{
@@ -572,7 +599,7 @@
 
   /* Landing CSS */
 
-  #landing::before{
+  /* #landing::before{
     content: '';
     transition: .3s ease-in-out;
     background-image: url("Assets/Images/landing-image.jpg");
@@ -586,16 +613,16 @@
     z-index: 40;
     position: relative;
     z-index: 40;
-  }
+  } */
 
   .landing-header{
     text-transform: uppercase !important;
-    width: 80%;
-    max-width: 500px;
-    top: 25%;
+    width: 100%;
+    max-width: 700px;
+    top:50%;
     position: absolute;   
     z-index: 45;
-    transform: translateZ(40px) scale(0.66); 
+    transform: translateY(-50%) translateZ(0px);  
   }
 
   .line-logo{
@@ -611,7 +638,7 @@
   }
 
   #tag1, #tag2{
-    padding: 60px 60px;
+    padding: 30px;
     color: var(--white);
     background-color: #00000093;
     box-shadow: 0px 0px 5px #00000093;
@@ -1222,8 +1249,6 @@
     text-transform: uppercase;
     text-align: center;
     width: 100%;
-    top:30%;
-    transform: scale(0.8);
   }
 
   #tag1 {
@@ -1645,8 +1670,6 @@
     text-align: center;
     text-shadow: 2px 0px 5px #0000001a;
     width: 100%;
-    top:27%;
-    transform: scale(0.8);
   }
 
   #tag1 {
@@ -2152,7 +2175,7 @@
   }
 
   /* --- LANDING SECTION & PARALLAX --- */
-  #landing {
+  #landing{
 
       align-items: center;
       justify-content: center;
@@ -2389,7 +2412,7 @@
       width: 100%;
       height: 100%;
       display: flex;
-      flex-wrap: wrap;     
+      flex-wrap: wrap;   
       z-index: -100;
   }
 

@@ -895,11 +895,12 @@
   }
 
   #garden-maintenance .column-image {
-    background-image: url("Assets/Images/garden-maintenance (2).png");
+    background-image: url("Assets/Images/garden-maintenance-2.png");
     background-position: bottom top;
     background-size: cover;
   }
 
+ /* Garden Maintenance Formatting */
 
   #garden-maintenance .column-text li{
     text-align: center;
@@ -962,6 +963,8 @@
     display: block;
     width: 100%
   }
+
+  /* Column Alignments and formatting */
 
   .column-text.right-align p, .column-text.right-align h3, .column-text.right-align h4{
     text-align: start !important;

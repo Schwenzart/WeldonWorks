@@ -154,7 +154,8 @@
   .Marius4568-content-wrapper .arrow {
     width: calc(1.4rem + 0.6vmin);
     height: calc(1.4rem + 0.6vmin);
-    border: solid var(--darkblue);
+    border: inset var(--white);
+    border-radius: 3px;
     border-width: 0 calc(0.5rem + 0.2vmin) calc(0.5rem + 0.2vmin) 0;
     cursor: pointer;
     transition: transform 0.3s;
@@ -424,6 +425,11 @@
     height: 0;
   }
 
+  .sidebar > div:nth-of-type(2) {
+    border-top: 3px groove white;
+    border-bottom: ridge 2px white;
+  }
+
   #landing{
     position: relative;
     background-size: cover;
@@ -434,9 +440,7 @@
 
   .icon-link{
     align-content: center;
-    height: 60px !important;
     width: 100% !important;
-    aspect-ratio: 1 / 1;
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;
@@ -453,23 +457,46 @@
     left: clamp(10px, 3.5vw, 50px);
   }
 
-  #nav-instagram, #nav-facebook{
+  .contact-nav #nav-instagram, .contact-nav #nav-facebook{
     position: absolute;
-    top: 90px;
-    height: 50px;
-    width: 50px;
-    min-width: unset !important;
-    border-radius: 15px;
+    top: 10%;
+    max-height: 50px;
+    max-width: 50px;
+    width: auto;
+    height: 80%;
+    aspect-ratio: 1 / 1;
+    border-radius: clamp(5px, 2vmin, 15px);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     padding: 0;
+    outline: groove 3px #00000071;
+    outline-offset: -2px;
+    z-index: 1000;
+  }
+
+  .nav-links #nav-instagram, .nav-links #nav-facebook{
+    position: absolute;
+    top: 90px;
+    max-height: 50px;
+    max-width: 50px;
+    width: auto;
+    height: 90%;
+    aspect-ratio: 1 / 1;
+    border-radius: clamp(5px, 2vmin, 15px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 0;
+    outline: groove 3px #00000071;
+    outline-offset: -2px;
+    z-index: 1000;
   }
 
   #nav-facebook:hover, #nav-instagram:hover, .icon-glow:hover{
     background-color: unset !important;
-    filter: brightness(1.2);
-    box-shadow: 0px 0px 10px #ffffff69;
+    filter: brightness(1.1);
+    box-shadow: 0px 0px 10px #ffffff44;
   }
 
   .icon-glow{
@@ -708,36 +735,43 @@
     border-radius: 0px 0px 0px 20px;
     background: linear-gradient(-90deg, var(--darkblue) 90%, #162183fb 100%);
     height: max-content !important;
+    z-index: 1001;
   }
 
   .sidebar > div {
     transition: all 0.5s, border-radius 0s !important;
   }
 
-  .sidebar > div:last-child{
+  .sidebar > div:last-child > a, .sidebar > div:nth-of-type(1) > a, .sidebar > div:nth-of-type(2) > a{
+    color: var(--darkblue) !important;
+    background-color: var(--white) !important;
+  }
+
+  .sidebar > div:last-child > a {
+    padding: clamp(10px, 3vh, 20px) 0;
     border-radius: 0 0 0 20px !important;
   }
 
-
-  .sidebar > div:last-child:hover{
+  .sidebar > div:last-child:hover, .sidebar > div:nth-of-type(1):hover, .sidebar > div:nth-of-type(2):hover{
     background-color: var(--white);
     box-shadow: 3px 0px 2px var(--white);
-    
+    border-top: 3px groove var(--white);
     z-index: 1006;
   }
 
   .sidebar > div > a {
     height: 100%;
     width: 100%;
+    font-size: clamp(0.5rem, calc(.1rem + 3vmin), .9rem);
   }
 
   .sidebar > div > a:hover {
-    font-size: clamp(0.7rem, calc(.1rem + 6vmin), 1rem);
+    font-size: clamp(0.6rem, calc(.1rem + 3vmin), 1rem);
     color: var(--darkblue);
   }
 
   .sidebar> div:hover > a {
-    color: var(--darkblue) !important;
+    color: var(--darkblue);
     opacity: 90%;
   }
   
@@ -791,10 +825,12 @@
     color: var(--white);
     background-color: var(--darkblue);
     opacity: .95;
-    box-shadow: 0px 5px 15px #000000e8, inset 1px 1px 2px #5452c4ea;
+    box-shadow: 0px 5px 5px #00000096, 0px -5px 5px #00000049, inset 1px 3px 30px #09091bea;
     margin: 20px 0;
     z-index: 51;    
     border-radius: 30px;
+    border: 3px var(--white);
+    border-style: ridge;
   }
 
   #tag2{
@@ -1210,26 +1246,32 @@
     justify-content: left;
     top: 79px;
     transform: translateZ(1px);
-    z-index: 900;
+    z-index: 1001;
     transition: var(--nav-anim-timing);
   }  
 
   .sidebar > div, .sidebar > .icon-link{
     display: block; 
     align-items: center;    
-    height: 4rem;
+  }
+
+  .sidebar > div:not(:last-child) > a {
+    color: var(--white);
+  }
+
+  .sidebar > div:hover:not(:last-child) > a {
+    color: var(--darkblue);
   }
 
   .sidebar > div > a {
     align-content: center;
     display: block;
-    color: var(--white);
     margin-right: 0;
     transition: all 0.3s, margin-right 300ms ;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: clamp(0.6rem, calc(.1rem + 4vmin), .9rem);
     font-weight: 1000;
+    padding: clamp(5px, 2vh, 10px) 0;
   }
 
   .sidebar > div:hover{
@@ -1623,26 +1665,26 @@
     justify-content: left;
     top: 79px;
     transform: translateZ(1px);
-    z-index: 900;
+    z-index: 1001;
     transition: var(--nav-anim-timing);
   }  
 
   .sidebar > div, .sidebar > .icon-link{
     display: flex; 
+    aspect-ratio: unset;
     align-items: center;
     transition: 0.3s;
-    height: 4rem;
   }
 
   .sidebar > div > a {
     display: block;
+    padding: clamp(10px, 3vh, 15px) 0;
     align-content: center;
     color: var(--white);
     margin-right: 0;
     transition: all 0.3s, margin-right 300ms ;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: clamp(0.6rem, calc(.1rem + 6vmin), .9rem);
     font-weight: 1000;
   }
 
@@ -1655,10 +1697,6 @@
   .sidebar> div:hover > a {
     color: var(--darkblue) !important;
     opacity: 90%;
-  }
-
-  .sidebar > div > a:hover{
-    color: var(--darkblue);
   }
 
   .nav-links-dropdown-button{
@@ -2023,20 +2061,33 @@
     text-align: center;
     justify-content: center;
     display: flex;
-    gap: 10px;
     position: absolute;
     top: 80px;
     left: 0px;
     height: 40px;  
     align-items: center;
     width: 100%;
+    
     background: linear-gradient(black 10%, #000000da 100%);
     /* background: linear-gradient(#162183ec 5%, #162183a9 100%); */
     box-shadow: 0px 5px 6px #00000056;
     font-size: clamp(0.5rem, calc(.1rem + 2vmin), .8rem);
   }
 
-  .contact-nav a{
+  .contact-nav > div{
+    display: flex;
+    gap: clamp(1px, .5vmin, 10px);
+    height: 100%;
+    width: 72%;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+
+
+  .contact-nav div a{
     box-sizing: border-box;
     align-self: center;
     display: block;

@@ -77,12 +77,29 @@
     background: var(--tobermore-logo);
   }
 
-  .credited-logo {
+  .credits {
+    display: flex;
+    gap: min(3vmin, 15px);
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: center;
+    transform-style: preserve-3d;
     position: absolute;
-    width: 80px;
-    height: 80px;
-    border-radius: 20px;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%) translateY(25%) translateZ(-30px) scale(1.2);
+  }
+
+  .credited-logo {
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
     display: block;
+    min-width: clamp(100px, 30vmin, 250px);
+    aspect-ratio: 3 / 2;
+    height: auto;
+    max-height: 150px;
   }
 
   #testimonials {
@@ -438,6 +455,7 @@
     background-position: center;
     z-index: -100;
     transform: translateZ(-50px);  
+    overflow: unset;
   }
 
   .icon-link{

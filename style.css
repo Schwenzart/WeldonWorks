@@ -67,6 +67,7 @@
 
   .cityandguilds {
     background: var(--cg-logo);
+    min-width: clamp(100px, 30vmin, 180px) !important;
   } 
 
   .pavingstonesdirect {
@@ -79,7 +80,8 @@
 
   .credits {
     display: flex;
-    gap: min(3vmin, 15px);
+    column-gap: min(3vmin, 15px);
+    row-gap: 0px;
     flex-wrap: wrap;
     align-items: stretch;
     align-content: stretch;
@@ -96,7 +98,7 @@
     background-size: 80%;
     background-position: center;
     display: block;
-    min-width: clamp(100px, 30vmin, 250px);
+    min-width: clamp(100px, 30vmin, 250px) ;
     aspect-ratio: 3 / 2;
     height: auto;
     max-height: 150px;

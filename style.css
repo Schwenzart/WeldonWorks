@@ -62,13 +62,14 @@
 
   #testimonials {
     justify-content: start;
+    height: 100%;
   }
 
   #testimonials .content-holder {
     background-color: transparent !important;
     box-shadow: none !important;
-    margin: 15px 0;
-    padding: 100px 0;
+    margin: 130px 0 0 0;
+    padding: 0;
     outline: none;
     width: 100%;
   }
@@ -141,7 +142,7 @@
     font-size: calc(0.8rem + 0.3vmin);
     max-width: 500px;
     text-align: center;
-    margin-bottom: calc(0.7rem + 0.5vmin);
+    margin-bottom: clamp(.8rem, calc(0.1rem + 3vmin), 1.2rem);
     color: rgb(92, 92, 92);
     line-height: 1.25rem;
   }
@@ -176,30 +177,6 @@
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     right: 3%;
-  }
-
-  .Marius4568-content-wrapper .surprise-me-btn {
-    border: 2px solid var(--darkblue);
-    background-color: rgb(224, 238, 255);
-    color: rgb(79, 143, 226);
-    border-radius: 2rem;
-    padding: calc(0.5rem + 0.2vmin) 0;
-    width: calc(7rem + 5vmin);
-    text-align: center;
-    transition: background-color 0.3s, transform 0.3s;
-    cursor: pointer;
-    margin-bottom: calc(1.4rem + 1vmin);
-  }
-
-  .Marius4568-content-wrapper .surprise-me-btn:hover {
-    transition: background-color 0.3s, transform 0.3s;
-    background-color: rgb(255, 255, 255);
-    transform: rotate(5deg);
-  }
-
-  .Marius4568-content-wrapper .move-head {
-    animation: moveHead 1.55s infinite;
-    animation-delay: -0.8s;
   }
 
   @keyframes moveHead {

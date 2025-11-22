@@ -56,7 +56,7 @@
         <div class="mobile-hidden" id="nav-top-right"><a id="email-icon" href="mailto:weldonworkslandscape@hotmail.com" target="_blank" rel="noopener noreferrer">Email Us</a></div>
       </div>        
         <div class="nav-links mobile-hidden">
-            <div><a onclick="scrollToID('me')">ABOUT US</a>  </div>              
+            <div><a onclick="scrollToID('about')">ABOUT US</a>  </div>              
             <div><a onclick="scrollToID('services')">OUR SERVICES</a></div>
             <div><a onclick="scrollToID('patios')">PATIOS &amp; PAVING</a></div>
             <div><a onclick="scrollToID('fencing')">FENCING &amp; DECKING</a></div>                           
@@ -78,7 +78,7 @@
           </label>
 
           <aside class="sidebar mobile-show">
-            <div class="icon-link"><a onclick="scrollToID('me')">ABOUT US</a>  </div>              
+            <div class="icon-link"><a onclick="scrollToID('about')">ABOUT US</a>  </div>              
             <div class="icon-link"><a onclick="scrollToID('services')">OUR SERVICES</a></div>
             <div class="icon-link"><a onclick="scrollToID('patios')">PATIOS &amp; PAVING</a></div>
             <div class="icon-link"><a onclick="scrollToID('fencing')">FENCING &amp; DECKING</a></div>                             
@@ -104,13 +104,12 @@
     </div>
 
     <!-- ABOUT SECTION -->
-    <div class="section section-center "id="me">
-      
+    <div class="section section-center "id="about">
       <div class = "content-holder groove full-width-content">
         <h2 class="title" contact-prompt >About Us</h2>
-        <p>
+        <h3>
           At <b>Weldon Works</b> we believe Landscaping & Garden Maintenance are built on recommendation and reputation, so we cover all aspects of <a onclick="scrollToID('landscaping')">Hard &amp; Soft Landscaping</a>.
-        </p>
+        </h3>
         <p>
           Gardens that we <a onclick="scrollToID('garden-design')">design</a> are always bespoke and we like to work in collaboration with our clients to achieve the highest standard regardless of the size or budget of a project.
         </p>
@@ -389,6 +388,27 @@
       </div>
     </div> 
 
+    <div class="section section-center "id="testimonials">
+      <div class = "content-holder groove full-width-content">
+        <div class="Marius4568-content-wrapper">
+          <h2 class="title">Our Testimonials</h2>
+          <div class="wrapper-for-arrows">
+            <div id="reviewWrap" class="groove review-wrap">
+              <div id="description"></div>
+              <div id="jobType"></div>
+              <div id="personName"></div>
+            </div>
+            <div class="left-arrow-wrap arrow-wrap">
+              <div class="arrow" id="leftArrow"></div>
+            </div>
+            <div class="right-arrow-wrap arrow-wrap">
+              <div class="arrow" id="rightArrow"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Contact Section -->
 
     <div class="section section-center" id="contact">
@@ -424,13 +444,14 @@
 
     <div class="footer">
       <p>© 2025 Weldone Works Landscaping &amp; Gardening</p>
-      <a href="https://schwenz.uk" target="_blank" rel="noopener noreferrer">Created by Schwenzart</a>
+      <a href="https://schwenz.uk" target="_blank" rel="noopener noreferrer">Website created by Schwenzart</a>
       <div class="schwenzLogo">
         <a href="https://schwenz.uk" target="_blank" rel="noopener noreferrer"></a>
       </div>
     </div>
   </div>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="scipt.js"></script>
   <script>
     function scrollToID(id) {
       document.getElementById(id).scrollIntoView({ behavior: 'smooth', inline: 'nearest' });

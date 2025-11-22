@@ -30,6 +30,11 @@
     --font-family-b: "Roboto", sans-serif;
     --dark-gradiant: radial-gradient(circle,rgba(59, 65, 66, 1) 0%, rgba(51, 50, 50, 1) 50%, rgba(28, 28, 28, 1)  100%);
 
+    --tobermore-logo: url("https://www.tobermore.co.uk/homeowner/wp-content/uploads/registered_contractor_cmyk_update-01-1-300x123.png");
+    --pavingdirect-logo: url("https://hardscapes.uk/wp-content/uploads/2024/08/Screenshot-2024-08-07-at-11.28.43.png");
+    --cg-logo: url("https://www.cityandguilds.com/-/media/cityandguilds-site/images/miscellaneous/logos/city_guilds_logo_group_endorsement_rgb_png-png.png?h=108&w=150&hash=390C18FC1B0A90CDC390047932B61385")
+
+
 }
 
 /* --- RESET --- */
@@ -58,6 +63,26 @@
     text-wrap-style: balance;
     font-size: clamp(1.1rem, calc(.1rem + 3vmin), 1.2rem);
     line-height: clamp(1.15rem, calc(.1rem + 3vmin), 1.35rem);
+  }
+
+  .cityandguilds {
+    background: var(--cg-logo);
+  } 
+
+  .pavingstonesdirect {
+    background: var(--pavingdirect-logo);
+  } 
+
+  .tobermore {
+    background: var(--tobermore-logo);
+  }
+
+  .credited-logo {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    display: block;
   }
 
   #testimonials {
@@ -282,7 +307,7 @@
   .wrapper{
     background: url("Assets/Images/grass-background.jpg");
     background-position: center;
-    background-size: 75%;
+    background-size: 60%;
   }
 
   .content-holder:not(.contact-container) {

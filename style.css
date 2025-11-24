@@ -107,13 +107,20 @@
   #testimonials {
     justify-content: start;
     height: 100%;
+    min-height: max-content;
+  }
+
+  #testimonials .title{
+    position: fixed;
+    top: 12vmin;
+    font-size: calc(.5rem + 3vmin );
   }
 
   #testimonials .content-holder {
     background-color: transparent !important;
     box-shadow: none !important;
-    margin: 130px 0 0 0;
-    padding: 0;
+    margin: auto 0;
+    padding: 0 0 30px 0;
     outline: none;
     width: 100%;
   }
@@ -135,15 +142,8 @@
     color: var(--white) !important;
     text-shadow: 0px 0px 50px black;
     outline: none !important;
-    font-size: clamp(1.1rem, .1rem + 2vmin, 1.5rem);
+    font-size: clamp(.5rem, .1rem + 2vmin, 1.5rem);
 
-  }
-
-  .Marius4568-content-wrapper .blue-line {
-    height: 0.3rem;
-    width: 6rem;
-    background-color: var(--darkblue);
-    margin-bottom: calc(1rem + 2vmin);
   }
 
   .Marius4568-content-wrapper .wrapper-for-arrows {
@@ -170,20 +170,20 @@
   }
 
   .Marius4568-content-wrapper #personName {
-    font-size: calc(1rem + 1vmin);
+    font-size: min(1rem, calc(.3rem + 3vmin));
     letter-spacing: calc(0.1rem + 0.1vmin);
     font-weight: bold;
     color: var(--darkblue);
   }
 
   .Marius4568-content-wrapper #jobType {
-    font-size: calc(0.8rem + 0.3vmin);
+    font-size: min(1.1rem, calc(0.3rem + 3vmin));
     margin-bottom: calc(0.7rem + 0.5vmin);
     color: black;
   }
 
   .Marius4568-content-wrapper #description {
-    font-size: calc(0.8rem + 0.3vmin);
+    font-size: min(.8rem ,calc(0.1rem + 2.5vmin));
     max-width: 500px;
     text-align: center;
     margin-bottom: clamp(.8rem, calc(0.1rem + 3vmin), 1.2rem);

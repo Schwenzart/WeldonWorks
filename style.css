@@ -15,7 +15,7 @@
     --logo-square: url("Assets/Images/W-Logo-1248x1248.jpg");
     --logo: url("Assets/Images/weldonworks-background.svg");
     --logo-line: url("Assets/Images/weldonworks-lines.png");
-    --instagram-icon: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/256px-Instagram_icon.png?20200512141346");
+    --instagram-icon: url("https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg");
     --facebook-icon: url("https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png");
     --mail-icon: url("https://cdn-icons-png.flaticon.com/512/888/888853.png");
     --phone-icon: url("https://cdn-icons-png.flaticon.com/512/4477/4477610.png");
@@ -293,6 +293,18 @@
     font-weight: 100;
   }
 
+  .wrapper-background{
+    position: fixed;
+    background: url("Assets/Images/grass-background.jpg");
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    perspective: 100px;
+    background-position: center;
+    background-size: 100%;
+    transition: background-size 1s ease;
+  }
+
   .wrapper {
     position: fixed;
     width: 100vw;
@@ -306,27 +318,11 @@
     /* scroll-snap-type: y proximity; */
   }
 
-  .wrapper::after{
-    width: 100vw;
-    height: 100vh;
-    content: '';
-    display: block;
-    position: fixed;
-    top: 0;
-
-  }
-
   .content-holder{
     margin: 15px auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
-  }
-
-  .wrapper{
-    background: url("Assets/Images/grass-background.jpg");
-    background-position: center;
-    background-size: 60%;
   }
 
   .content-holder:not(.contact-container) {
@@ -456,7 +452,7 @@
     background-size: cover;
     background-position: center;
     z-index: -100;
-    transform: translateZ(-50px);  
+    transform: translateZ(-25px);  
     overflow: unset;
   }
 
@@ -500,6 +496,7 @@
   .nav-links #nav-instagram, .nav-links #nav-facebook{
     position: absolute;
     top: 90px;
+    min-width: auto !important;
     max-height: 50px;
     max-width: 50px;
     width: auto;
@@ -543,14 +540,13 @@
     top: -2px;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.158);
     border-radius: 0px;
-    transition: all 500ms ease-in-out, color 600ms ease-in-out, font-size 0s, border 0s, top 0s;
     transition-delay: background 200ms;
   }
 
   .nav-links a:hover {
     border-radius: 0px 0px 15px 15px;
-    height: calc(100% - 2.5ex);
-    top: -2px;
+    height: calc(100% - 3ex);
+    top: -4px;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.05);
     color: rgb(255, 255, 255);
   }
@@ -823,7 +819,7 @@
   .landing-header{
     text-transform: uppercase !important;
     width: 100%;
-    max-width: 700px;
+    max-width: 800px;
     top:50%;
     position: absolute;   
     z-index: 45;
@@ -860,8 +856,11 @@
     padding: 10px 20px;
     width: 100%;
     margin: 0 auto;
-    font-size: clamp(0.5rem, calc(.1rem + 1.5vmin), 1.5rem) !important;
-    letter-spacing: clamp(1rem, calc(.1rem + 2.1vmin), 1.6rem, ) !important;
+
+  }
+
+  #tag2 p {
+    font-size: clamp(0.5rem, calc(.1rem + 3vmin), 2rem) !important;
   }
 
   .landing-panel h1, .landing-panel p {
@@ -2098,7 +2097,7 @@
 
   .contact-nav > div{
     display: flex;
-    gap: clamp(1px, .5vmin, 10px);
+    gap: clamp(5px, .5vmin, 10px);
     height: 100%;
     width: 72%;
     margin: 0 auto;
@@ -2326,6 +2325,11 @@
   .wrapper {
     top: 69px;
     height: calc(100% - 69px);
+
+  }
+
+  .wrapper-background{
+    background-size: 60%;
   }
   .nav-container {
     box-shadow: inset 0px 2px 5px #0000001a;
@@ -2357,13 +2361,13 @@
 
     display: block;
     height: calc(100% - 4ex);
-    width: calc(100% - 8ex);
-    padding: 2ex 4ex;
+    width: calc(100% - 2ex);
+    padding: 1.5ex 1ex;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
     font-style: bold;
-    font-size: clamp(0.6rem, calc(0.5vmin + 0.1rem), 0.7rem);
+    font-size: clamp(0.55rem, calc(.4vmin + 0.1rem), .8rem);
     color: var(--white);
     font-weight: 1000;
   }
@@ -2552,6 +2556,10 @@
     top: 69px;
     height: calc(100% - 69px);
   }
+
+  .wrapper-background{
+    background-size: 60%;
+  }
   .nav-container {
     width: 100%;
     height: 100%;
@@ -2587,7 +2595,7 @@
     text-transform: uppercase;
     text-align: center;
     font-style: bold;
-    font-size: clamp(.7rem, calc(1vmin + 0.1rem), 1rem);
+    font-size: clamp(.8rem, calc(1vmin + 0.1rem), 1.1rem);
     color: var(--white);
     font-weight: 1000;
     min-width: 100px;

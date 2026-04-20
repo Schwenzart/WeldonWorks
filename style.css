@@ -303,6 +303,7 @@
     background-position: center;
     background-size: 100%;
     transition: background-size 1s ease;
+    filter: blur(0px) saturate(1.4) brightness(1) hue-rotate(28deg);
   }
 
   .wrapper {
@@ -326,7 +327,7 @@
   }
 
   .content-holder:not(.contact-container) {
-    box-shadow: 0px 5px 20px #000000, 0px 0px 100px #0000001a;
+    box-shadow: 0px 5px 8px #041900ba, 0px 5px 7px #000b4de6;
   }
 
   .section-center:nth-of-type(even){

@@ -65,6 +65,13 @@
     line-height: clamp(1.15rem, calc(.1rem + 3vmin), 1.35rem);
   }
 
+  #about-text-block{
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
   .cityandguilds {
     background: var(--cg-logo);
     min-width: clamp(100px, 30vmin, 180px) !important;
@@ -105,24 +112,24 @@
   }
 
   #testimonials {
-    justify-content: start;
+    justify-content: center;
     height: 100%;
     min-height: max-content;
   }
 
   #testimonials .title{
-    position: fixed;
-    top: 12vmin;
     font-size: calc(.5rem + 3vmin );
+    margin-top: 20px;
   }
 
   #testimonials .content-holder {
     background-color: transparent !important;
     box-shadow: none !important;
-    margin: auto 0;
-    padding: 0 0 30px 0;
+    margin: 15px auto;
+    padding: 0 0 15px 0;
     outline: none;
     width: 100%;
+    backdrop-filter: none !important;
   }
 
   .Marius4568-content-wrapper {
@@ -149,6 +156,7 @@
   .Marius4568-content-wrapper .wrapper-for-arrows {
     position: relative;
     width: 100%;
+    height: 45vh;
     max-width: 500px;
     border-radius: 2rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -183,7 +191,8 @@
   }
 
   .Marius4568-content-wrapper #description {
-    font-size: min(.8rem ,calc(0.1rem + 2.5vmin));
+    font-size: clamp(.7rem, calc(0.2rem + 1.5vmin), 1.2rem);
+    letter-spacing: normal;
     max-width: 500px;
     text-align: center;
     margin-bottom: clamp(.8rem, calc(0.1rem + 3vmin), 1.2rem);
@@ -295,15 +304,15 @@
 
   .wrapper-background{
     position: fixed;
-    background: url("Assets/Images/grass-background.jpg");
+    background: url("Assets/Images/lawn-background.png");
     content: '';
     width: 100vw;
     height: 100vh;
     perspective: 100px;
+    background-size: cover;
     background-position: center;
-    background-size: 100%;
     transition: background-size 1s ease;
-    filter: blur(0px) saturate(1.4) brightness(1) hue-rotate(28deg);
+    filter: blur(0px) saturate(1.1) brightness(1) hue-rotate(0deg);
   }
 
   .wrapper {
@@ -327,7 +336,7 @@
   }
 
   .content-holder:not(.contact-container) {
-    box-shadow: 0px 5px 8px #041900ba, 0px 5px 7px #000b4de6;
+    box-shadow: 0px 5px 8px #2e2e2e9c, 0px 5px 7px #000000b0;
   }
 
   .section-center:nth-of-type(even){
@@ -342,13 +351,13 @@
 
   .title {
     min-width: fit-content;
-    width: 80%;
-    padding: 0 1.5ex;
-    margin-left: auto;
-    margin-right: auto;    
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 8px;
     color: var(--white);
     background-color: var(--darkerblue);
-    border-radius: 1000px;
+    border-radius: 8px;
+    
     text-shadow: 2px 0px 5px #0000002f;
   }
   .section-center:nth-of-type(odd){
@@ -371,7 +380,8 @@
   }
 
   .section-center:nth-of-type(odd):not(#landing) .content-holder:not(.contact-container){
-    background-color: var(--white);
+    background-color: #ffffffd5;
+    backdrop-filter: blur(0.9px);
     color: var(--darkblue);
   }
 
@@ -384,8 +394,8 @@
   }
 
   .section-center:nth-of-type(even) .content-holder:not(.contact-container){
-    outline: 3px groove #0000001a;
-    background-color: var(--darkblue);
+    background-color: #041188d0;
+    backdrop-filter: blur(0.9px);
     color: var(--white);
   }
 
@@ -671,7 +681,7 @@
     border: none;
     border-radius: 100px;
     cursor: pointer;
-    transition: .3s ease;
+    transition: background-color .05s ease, max-width .2s ease, color .3s ease;
     width: 60%;
     max-width: 300px;
     margin-top: 20px;
@@ -681,7 +691,9 @@
   /* When moving the mouse over the submit button, add a darker green color */
   input[type=submit]:hover {
     color: #008628;
-    background-color: color-mix(in srgb, var(--darkblue), rgb(182, 182, 182) 80%);
+    background-color: #fff;
+    width: 62%;
+    max-width: 320px;
   }
 
   #submit-result{
@@ -842,14 +854,14 @@
   #tag1, #tag2{
     padding: 30px;
     color: var(--white);
-    background-color: var(--darkblue);
-    opacity: .95;
-    box-shadow: 0px 5px 5px #00000096, 0px -5px 5px #00000049, inset 1px 3px 30px #09091bea;
+    background-color: #000c7ed0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 5px 5px #0000004d, 0px -5px 3px #00000049, inset 1px 1px 0px #ffffff69;
     margin: 20px 0;
     z-index: 51;    
-    border-radius: 30px;
+    border-radius: 10px;
     border: 3px var(--white);
-    border-style: ridge;
+
   }
 
   #tag2{
@@ -924,7 +936,7 @@
   .content-holder.full-width-content {
     width: 95%;
     max-width: 1000px;
-    padding: 15px;
+    padding: 18px;
     border-radius: 10px;
   }
 
@@ -1066,8 +1078,8 @@
     outline-offset: -2px;
     display: block;
     font-size: clamp(.7rem, calc(.1rem + 2vmin), 1rem);
-    background-color: var(--darkerblue);
-    color: white;
+    background-color: #e7e7e7;
+    color: var(--darkblue);
     width: 98%;
     margin: .5rem 0;
     text-align: center;
@@ -1081,9 +1093,9 @@
 
   #services ul > li:hover {
     width: 94%;
-    color: hsl(from var(--white) h s 95);
-    background-color: hsl(from var(--darkblue) h s 15);
-    box-shadow: 0px 2px 15px #0000009c;
+    color: var(--darkblue);
+    background-color: #fff;
+    box-shadow: 0px 2px 15px #0000009c inset 1px 1px 20px var(--darkblue);
   }
 
   #services ul > li > a {
@@ -1232,11 +1244,14 @@
 /* Landscape phones and down */
 @media only screen and (max-width: 480px) {
 
+  .footer{
+    padding-bottom: 60px !important;
+  }
+
   .content-holder, .content-holder.full-width-content {
     width: 90%;
     height: max-content;
     padding: 15px;
-    border-radius: 10px;
   }
 
   .mobile-hidden{
@@ -1651,11 +1666,14 @@
 /* Landscape phone to portrait tablet */
 @media (min-width: 481px) and (max-width: 767px) {
 
+  .footer{
+    padding-bottom: 60px !important;
+  }
+
   .content-holder, .content-holder.full-width-content {
     width: 85%;
     height: max-content;
     padding: 15px;
-    border-radius: 15px;
   }
 
   .mobile-hidden{
@@ -2329,9 +2347,6 @@
 
   }
 
-  .wrapper-background{
-    background-size: 60%;
-  }
   .nav-container {
     box-shadow: inset 0px 2px 5px #0000001a;
     width: 100%;
@@ -2521,8 +2536,7 @@
 
   .content-holder.full-width-content {
     max-width: 1000px;
-    padding: 30px;
-    border-radius: 15px;
+    padding: 18px;
   }
 }
 
@@ -2558,9 +2572,6 @@
     height: calc(100% - 69px);
   }
 
-  .wrapper-background{
-    background-size: 60%;
-  }
   .nav-container {
     width: 100%;
     height: 100%;
@@ -2763,8 +2774,7 @@
 
   .content-holder.full-width-content {
     max-width: 1000px;
-    padding: 30px;
-    border-radius: 15px;
+    padding: 18px;
   }
 
 }
